@@ -4,11 +4,11 @@ function Navigation() {
     return (
         <div>
             <nav  className="nav">
-                <Link to="/pedalboard">
-                    <img className="nav-img" alt="builder" src="/images/tobuilderimage.jpeg"/>
+                <Link to="/builder">
+                    <img className="nav-img" alt="builder" src="/images/tobuilderimage.jpeg" height="750"/>
                 </Link>
-                <Link to="/builds">
-                    <img className="nav-img" alt="collection" src="/images/toboardcollection.jpeg"/>
+                <Link to="/collection">
+                    <img className="nav-img" alt="collection" src="/images/toboardcollection.jpeg" height="750" width="1000"/>
                 </Link>
             </nav>
         </div>
