@@ -1,4 +1,4 @@
 class Config < ApplicationRecord
-    has_many :pedals 
     belongs_to :user
+    has_many :pedals 
 end

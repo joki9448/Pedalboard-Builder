@@ -4,7 +4,7 @@ class CreatePedals < ActiveRecord::Migration[7.0]
       t.string :brand
       t.string :model
       t.string :effect
-      t.integer :user_id
+      t.integer :config_id
 
       t.timestamps
     end
