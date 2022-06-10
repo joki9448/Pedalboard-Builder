@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 function Navigation() {
     return (
         <div>
-            <nav  className="nav">
+            <nav className="nav">
+                <h1>Pedalboard Builder</h1>
                 <Link to="/builder">
                     <img className="nav-img" alt="builder" src="/images/tobuilderimage.jpeg" height="750"/>
                 </Link>
