@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Pedals from './Pedals';
 import Menu from './Menu';
 
-function Builder({ pedals, setPedals }) {
+function Builder() {
+    const [brands, setBrands] = useState([])
 
     return (
         <div>
@@ -11,7 +13,7 @@ function Builder({ pedals, setPedals }) {
             </Link>
             <h1>Build Your Board</h1>
             <div className="menu-container">
-                <Menu pedals={pedals} setPedals={setPedals} />
+                <Menu brands={brands} setBrands={setBrands}/>
             </div>
         </div>
     )
