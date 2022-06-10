@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Builder from './components/Builder';
+import Collection from './components/Collection';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route exact path="/builder">
             <Builder />
+          </Route>
+          <Route exact path="/collection">
+            <Collection />
           </Route>
         </Switch>
       </Router>
