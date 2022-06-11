@@ -2,11 +2,14 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Menu from './Menu';
 import Pedals from './Pedals';
+import Pedalboard from './Pedalboard';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+    // const [selectedPedals, setSelectedPedals] = useState([])
     const [isBrandVisible, setIsBrandVisible] = useState(false)
-    
+    const [isBoardVisible, setIsBoardVisible] = useState(false)
+
     const request = async () => {
         try {
             let req = await fetch('/pedals')
@@ -19,10 +22,14 @@ function Builder() {
     }
     useEffect(() => {request()}, [])
 
+    const handleBoardVisibleClick = () => {
+        setIsBoardVisible(!isBoardVisible)
+    }
+
     return (
         <div>
             <Link to="/">
-                <button>HOME</button>
+                <button className="home-button">HOME</button>
             </Link>
             <h1>Build Your Board</h1>
             <div className="menu-container">
@@ -35,6 +42,8 @@ function Builder() {
             {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
             })}
+            <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
+            {isBoardVisible ? <Pedalboard /> : null}
         </div>
     )
 }
