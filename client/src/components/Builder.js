@@ -6,10 +6,12 @@ import Pedalboard from './Pedalboard';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
-    const [pedalboard, setPedalboard] = useState('')
+    const [frame, setFrame] = useState('')
     // const [selectedPedals, setSelectedPedals] = useState([])
     const [isBrandVisible, setIsBrandVisible] = useState(false)
-    const [isBoardVisible, setIsBoardVisible] = useState(false)
+    const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
+
+    const frames = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
 
     const request = async () => {
         try {
@@ -24,7 +26,7 @@ function Builder() {
     useEffect(() => {request()}, [])
 
     const handleBoardVisibleClick = () => {
-        setIsBoardVisible(!isBoardVisible)
+        setIsBoardContainerVisible(!isBoardContainerVisible)
     }
 
     return (
@@ -38,14 +40,13 @@ function Builder() {
                       setPedals={setPedals}
                       isBrandVisible={isBrandVisible}
                       setIsBrandVisible={setIsBrandVisible}
-                      setPedalboard={setPedalboard}
                 />
             </div>
             {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
             })}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
-            {isBoardVisible ? <Pedalboard pedalboard={pedalboard}/> : null}
+            {isBoardContainerVisible ? <Pedalboard frame={frame} setFrame={setFrame}/> : null}
         </div>
     )
 }

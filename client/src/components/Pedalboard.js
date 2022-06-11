@@ -1,8 +1,13 @@
-function Pedalboard({ pedalboard }) {
+import Frame from './Frame';
+
+function Pedalboard({ frames, frame, setFrame }) {
     return (
         <div className="pedalboard-container">
-            {/* <img src="/images/Frames/BCB-1000.jpeg" alt="pedalboardcontainertestimage" height="800" width="1300"/> */}
-            <img src={ pedalboard } alt="selectedpedalboard"/>
+            {
+                frames.map((f, i) => {
+                    return <Frame key={i} frame={frame} setFrame={setFrame} />
+                })
+            }
         </div>
     )
 }

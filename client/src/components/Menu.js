@@ -1,19 +1,20 @@
 import Pedals from './Pedals'
 
-function Menu({ pedals, isBrandVisible, setIsBrandVisible, setPedalboard }) {
+function Menu({ pedals, isBrandVisible, setIsBrandVisible }) {
     const { model, effect } = pedals
 
     // const handleBrandClick = () => {
     //     // alert('Clicked')
     //     return !isBrandVisible
     // }
-    const handleSelectPedalboard = () => {
-        alert('Clicked')
-    }
+    // const handleSelectPedalboard = (e) => {
+    //     // alert('Clicked')
+    //     setPedalboard(e.target.textContent)
+    // }
     return (
         <div>
             <h1>Menu</h1>
-            <button onClick={handleSelectPedalboard}>Select Pedalboard</button>
+            <button>Select Pedalboard</button>
             <button>Select Brand</button>
             <button>Select Type</button>
             <button>Select Model</button>
