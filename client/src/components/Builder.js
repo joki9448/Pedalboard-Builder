@@ -6,6 +6,7 @@ import Pedalboard from './Pedalboard';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+    const [pedalboard, setPedalboard] = useState('')
     // const [selectedPedals, setSelectedPedals] = useState([])
     const [isBrandVisible, setIsBrandVisible] = useState(false)
     const [isBoardVisible, setIsBoardVisible] = useState(false)
@@ -37,13 +38,14 @@ function Builder() {
                       setPedals={setPedals}
                       isBrandVisible={isBrandVisible}
                       setIsBrandVisible={setIsBrandVisible}
+                      setPedalboard={setPedalboard}
                 />
             </div>
             {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
             })}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
-            {isBoardVisible ? <Pedalboard /> : null}
+            {isBoardVisible ? <Pedalboard pedalboard={pedalboard}/> : null}
         </div>
     )
 }

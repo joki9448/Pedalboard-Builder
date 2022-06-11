@@ -1,6 +1,6 @@
 import Pedals from './Pedals'
 
-function Menu({ pedals, isBrandVisible, setIsBrandVisible }) {
+function Menu({ pedals, isBrandVisible, setIsBrandVisible, setPedalboard }) {
     const { model, effect } = pedals
 
     // const handleBrandClick = () => {
