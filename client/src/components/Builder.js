@@ -6,7 +6,7 @@ import Pedalboard from './Pedalboard';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
-    const [frame, setFrame] = useState('')
+    const [frameState, setFrameState] = useState('')
     // const [selectedPedals, setSelectedPedals] = useState([])
     const [isBrandVisible, setIsBrandVisible] = useState(false)
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
@@ -46,7 +46,7 @@ function Builder() {
                 return <Pedals key={p.id} pedals={p} />
             })}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
-            {isBoardContainerVisible ? <Pedalboard frame={frame} setFrame={setFrame}/> : null}
+            {isBoardContainerVisible ? <Pedalboard frames={frames} frame={frameState} setFrame={setFrameState}/> : null}
         </div>
     )
 }

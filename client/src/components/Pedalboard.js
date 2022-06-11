@@ -1,11 +1,12 @@
 import Frame from './Frame';
 
-function Pedalboard({ frames, frame, setFrame }) {
+function Pedalboard({ frames, frameState, setFrameState }) {
     return (
         <div className="pedalboard-container">
+            <h1>Pedalboard</h1>
             {
                 frames.map((f, i) => {
-                    return <Frame key={i} frame={frame} setFrame={setFrame} />
+                    return <Frame key={i} frames={f} frame={frameState} setFrame={setFrameState} />
                 })
             }
         </div>
