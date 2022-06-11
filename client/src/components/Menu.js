@@ -1,5 +1,3 @@
-import Frames from './FramesList';
-
 function Menu({
                 isFramesSelectVisible,
                 setIsFramesSelectVisible 

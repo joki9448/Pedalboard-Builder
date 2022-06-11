@@ -44,10 +44,9 @@ function Builder() {
                       setPedals={setPedals}
                       isFramesSelectVisible={isFramesSelectVisible}
                       setIsFramesSelectVisible={setIsFramesSelectVisible}
-                      setSelectedFrame={setSelectedFrame}
                 />
             </div>
-            {isFramesSelectVisible ? <FramesList framesList={framesList} setSelectedFrame={setSelectedFrame}/> : null}
+            {isFramesSelectVisible ? <FramesList framesList={framesList}/> : null }
             {/* {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
             })} */}
