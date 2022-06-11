@@ -4,6 +4,7 @@ import Menu from './Menu';
 import Pedals from './Pedals';
 import Pedalboard from './Pedalboard';
 import FramesList from './FramesList';
+import BrandsList from './BrandsList';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
@@ -14,7 +15,9 @@ function Builder() {
     const [isFrameSelected, setIsFrameSelected] = useState(false)
 
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
-    const [isBrandVisible, setIsBrandVisible] = useState(false)
+
+    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Darkglass']
+    const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
 
     const request = async () => {
         try {
@@ -44,6 +47,8 @@ function Builder() {
                     setPedals={setPedals}
                     isFramesSelectVisible={isFramesSelectVisible}
                     setIsFramesSelectVisible={setIsFramesSelectVisible}
+                    isBrandsListVisible={isBrandsListVisible}
+                    setIsBrandsListVisible={setIsBrandsListVisible}
                 />
             </div>
             {isFramesSelectVisible ? <FramesList 
@@ -53,6 +58,10 @@ function Builder() {
                 setIsFrameSelected={setIsFrameSelected}
                 isFrameSelected={isFrameSelected}
                 /> 
+            : null }
+            {isBrandsListVisible ? <BrandsList 
+                brandsList={brandsList}
+                />
             : null }
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame} isFrameSelected={isFrameSelected}/> : null}
