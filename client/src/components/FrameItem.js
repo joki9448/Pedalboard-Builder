@@ -1,6 +1,7 @@
 function FrameItem({ frame, setSelectedFrame }) {
+    console.log(frame)
     return (
-        <div>
+        <div className="frameslist-container" onClick={(e) => {console.log(e.target.textContent)}}>
             { frame }
         </div>
     )

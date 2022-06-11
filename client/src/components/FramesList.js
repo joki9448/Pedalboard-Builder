@@ -1,13 +1,12 @@
 import FrameItem from './FrameItem';
 
 function FramesList({ framesList, setSelectedFrame }) {
-    console.log(framesList)
     
     return (
-        <div className="frameslist-container">
+        <div>
             {
-                framesList.map((frame) => {
-                    return <FrameItem frame={frame} setSelectedFrame={setSelectedFrame}/>
+                framesList.map((frame, i) => {
+                    return <FrameItem key={i} frame={frame} setSelectedFrame={setSelectedFrame}/>
                 })
             }
         </div>
