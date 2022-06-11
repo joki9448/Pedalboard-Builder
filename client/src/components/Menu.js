@@ -1,8 +1,11 @@
-import Pedals from './Pedals'
+import Frame from './Frame';
 
-function Menu({ pedals, isBrandVisible, setIsBrandVisible }) {
-    const { model, effect } = pedals
-
+function Menu({ framesList, 
+                selectedFrame, 
+                setSelectedFrame,
+                isFramesListVisible,
+                setIsFramesListVisible 
+            }){
     // const handleBrandClick = () => {
     //     // alert('Clicked')
     //     return !isBrandVisible
