@@ -1,9 +1,17 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Menu from './Menu';
+import Pedals from './Pedals';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+
+    const request = async () => {
+        let req = await fetch('/pedals')
+        let res = await req.json()
+        setPedals(res)
+    }
+    useEffect(request, [])
 
     return (
         <div>
@@ -14,6 +22,9 @@ function Builder() {
             <div className="menu-container">
                 <Menu setPedals={setPedals}/>
             </div>
+            {pedals.map((p) => {
+                return <Pedals key={p.id} pedals={p} />
+            })}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import Pedals from './Pedals'
 
-function Menu({ pedals, setPedals }) {
-
+function Menu() {
+    
     return (
         <div>
             <h1>Menu</h1>
