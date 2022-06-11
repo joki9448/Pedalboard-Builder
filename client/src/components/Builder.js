@@ -6,11 +6,16 @@ import Pedals from './Pedals';
 function Builder() {
     const [pedals, setPedals] = useState([])
     const [isBrandVisible, setIsBrandVisible] = useState(false)
-
+    
     const request = async () => {
-        let req = await fetch('/pedals')
-        let res = await req.json()
-        setPedals(res)
+        try {
+            let req = await fetch('/pedals')
+            let res = await req.json()
+            // console.log('animelist res', res)
+            setPedals(res)
+        }   catch (error) {
+            alert(error.message)
+        }
     }
     useEffect(() => {request()}, [])
 
