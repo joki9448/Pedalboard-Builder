@@ -39,7 +39,7 @@ function Builder() {
                 <button className="home-button">HOME</button>
             </Link>
             <h1 className="builder-header">Build Your Board</h1>
-            <div className="menu-container">
+            <div>
                 <Menu pedals={pedals}
                       setPedals={setPedals}
                       isFramesSelectVisible={isFramesSelectVisible}
@@ -47,10 +47,10 @@ function Builder() {
                       setSelectedFrame={setSelectedFrame}
                 />
             </div>
-            {isFramesSelectVisible ? <FramesList framesList={framesList}/> : null}
-            {pedals.map((p) => {
+            {isFramesSelectVisible ? <FramesList framesList={framesList} setSelectedFrame={setSelectedFrame}/> : null}
+            {/* {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
-            })}
+            })} */}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame}/> : null}
         </div>

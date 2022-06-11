@@ -10,3 +10,7 @@ body {
   overflow: auto;
 }
 
+.frameslist-container {
+  display: flex;
+  justify-content: space-between;
+}

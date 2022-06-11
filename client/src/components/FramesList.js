@@ -1,6 +1,6 @@
-function FramesList({ framesList }) {
+function FramesList({ framesList, setSelectedFrame }) {
     return (
-        <div>
+        <div className="frameslist-container">
             {framesList}
         </div>
         // <div className="frame" onClick={() => {setFrameState(frameState)}}>

@@ -1,8 +1,6 @@
 import Frames from './FramesList';
 
 function Menu({
-                selectedFrame, 
-                setSelectedFrame,
                 isFramesSelectVisible,
                 setIsFramesSelectVisible 
             }){
@@ -15,7 +13,7 @@ function Menu({
     //     setPedalboard(e.target.textContent)
     // }
     return (
-        <div>
+        <div className="menu-container">
             <h1>Menu</h1>
             <button onClick={() => setIsFramesSelectVisible(!isFramesSelectVisible)}>Select Pedalboard</button>
             <button>Select Brand</button>
