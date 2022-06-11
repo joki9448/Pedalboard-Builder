@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 import Menu from './Menu';
 import Pedals from './Pedals';
 import Pedalboard from './Pedalboard';
+import FramesList from './FramesList';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
 
+    const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
 
@@ -14,7 +16,6 @@ function Builder() {
     const [isBrandVisible, setIsBrandVisible] = useState(false)
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
 
-    const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
 
     const request = async () => {
         try {
@@ -41,12 +42,12 @@ function Builder() {
             <div className="menu-container">
                 <Menu pedals={pedals}
                       setPedals={setPedals}
-                      framesList={framesList}
                       isFramesSelectVisible={isFramesSelectVisible}
                       setIsFramesSelectVisible={setIsFramesSelectVisible}
                       setSelectedFrame={setSelectedFrame}
                 />
             </div>
+            {isFramesSelectVisible ? <FramesList framesList={framesList}/> : null}
             {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />
             })}

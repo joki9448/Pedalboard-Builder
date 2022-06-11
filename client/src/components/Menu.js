@@ -1,10 +1,10 @@
-import Frame from './Frame';
+import Frames from './FramesList';
 
-function Menu({ framesList, 
+function Menu({
                 selectedFrame, 
                 setSelectedFrame,
-                isFramesListVisible,
-                setIsFramesListVisible 
+                isFramesSelectVisible,
+                setIsFramesSelectVisible 
             }){
     // const handleBrandClick = () => {
     //     // alert('Clicked')
@@ -17,7 +17,7 @@ function Menu({ framesList,
     return (
         <div>
             <h1>Menu</h1>
-            <button>Select Pedalboard</button>
+            <button onClick={() => setIsFramesSelectVisible(!isFramesSelectVisible)}>Select Pedalboard</button>
             <button>Select Brand</button>
             <button>Select Type</button>
             <button>Select Model</button>

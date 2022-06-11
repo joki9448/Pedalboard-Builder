@@ -1,7 +1,7 @@
-function Frame({ frames }) {
+function FramesList({ framesList }) {
     return (
         <div>
-            {frames}
+            {framesList}
         </div>
         // <div className="frame" onClick={() => {setFrameState(frameState)}}>
         //     {/* <img src={`/images/Frames/${frames}.jpeg`} alt="pedalboard-frame"/> */}
@@ -10,4 +10,4 @@ function Frame({ frames }) {
     )
 }
 
-export default Frame;
+export default FramesList;
