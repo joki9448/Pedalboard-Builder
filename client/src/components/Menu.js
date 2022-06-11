@@ -1,6 +1,6 @@
 function Menu({
                 isFramesSelectVisible,
-                setIsFramesSelectVisible 
+                setIsFramesSelectVisible,
             }){
     // const handleBrandClick = () => {
     //     // alert('Clicked')

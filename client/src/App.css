@@ -3,13 +3,13 @@ body {
   text-align: center;
 }
 
-.pedalboard-container {
+/* .pedalboard-container {
   display: flex;
   align-items: flex-end;
   position: fixed;
   overflow: auto;
 }
-
+ */
 /* .frameslist-container {
   display: flex;
   flex-direction: row;

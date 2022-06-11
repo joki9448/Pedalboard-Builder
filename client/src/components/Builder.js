@@ -11,11 +11,10 @@ function Builder() {
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
+    const [isFrameSelected, setIsFrameSelected] = useState(false)
 
-    // const [selectedPedals, setSelectedPedals] = useState([])
-    const [isBrandVisible, setIsBrandVisible] = useState(false)
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
-
+    const [isBrandVisible, setIsBrandVisible] = useState(false)
 
     const request = async () => {
         try {
@@ -40,18 +39,23 @@ function Builder() {
             </Link>
             <h1 className="builder-header">Build Your Board</h1>
             <div>
-                <Menu pedals={pedals}
-                      setPedals={setPedals}
-                      isFramesSelectVisible={isFramesSelectVisible}
-                      setIsFramesSelectVisible={setIsFramesSelectVisible}
+                <Menu 
+                    pedals={pedals}
+                    setPedals={setPedals}
+                    isFramesSelectVisible={isFramesSelectVisible}
+                    setIsFramesSelectVisible={setIsFramesSelectVisible}
                 />
             </div>
-            {isFramesSelectVisible ? <FramesList framesList={framesList}/> : null }
-            {/* {pedals.map((p) => {
-                return <Pedals key={p.id} pedals={p} />
-            })} */}
+            {isFramesSelectVisible ? <FramesList 
+                framesList={framesList} 
+                selectedFrame={selectedFrame} 
+                setSelectedFrame={setSelectedFrame} 
+                setIsFrameSelected={setIsFrameSelected}
+                isFrameSelected={isFrameSelected}
+                /> 
+            : null }
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
-            {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame}/> : null}
+            {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame} isFrameSelected={isFrameSelected}/> : null}
         </div>
     )
 }
