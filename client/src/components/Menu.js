@@ -1,7 +1,12 @@
 import Pedals from './Pedals'
 
-function Menu() {
-    
+function Menu({ pedals, isBrandVisible, setIsBrandVisible }) {
+    const { model, effect } = pedals
+
+    // const handleBrandClick = () => {
+    //     // alert('Clicked')
+    //     return !isBrandVisible
+    // }
     return (
         <div>
             <h1>Menu</h1>

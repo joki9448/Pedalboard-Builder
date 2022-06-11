@@ -5,13 +5,14 @@ import Pedals from './Pedals';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+    const [isBrandVisible, setIsBrandVisible] = useState(false)
 
     const request = async () => {
         let req = await fetch('/pedals')
         let res = await req.json()
         setPedals(res)
     }
-    useEffect(request, [])
+    useEffect(() => {request()}, [])
 
     return (
         <div>
@@ -20,7 +21,11 @@ function Builder() {
             </Link>
             <h1>Build Your Board</h1>
             <div className="menu-container">
-                <Menu setPedals={setPedals}/>
+                <Menu pedals={pedals}
+                      setPedals={setPedals}
+                      isBrandVisible={isBrandVisible}
+                      setIsBrandVisible={setIsBrandVisible}
+                />
             </div>
             {pedals.map((p) => {
                 return <Pedals key={p.id} pedals={p} />

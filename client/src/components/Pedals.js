@@ -1,6 +1,6 @@
 function Pedals({ pedals }) {
-    console.log(pedals)
-    const { brand, model, effect } = pedals
+    // console.log(pedals)
+
     return (
         <div>
         </div>
