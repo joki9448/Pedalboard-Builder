@@ -1,4 +1,12 @@
-/* .pedalboard-container {
+body {
+  display: flex;
+  text-align: center;
+}
+
+.pedalboard-container {
+  display: flex;
+  align-items: flex-end;
   position: fixed;
   overflow: auto;
-} */
+}
+

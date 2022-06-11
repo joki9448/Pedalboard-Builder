@@ -32,7 +32,7 @@ function Builder() {
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
-            <h1>Build Your Board</h1>
+            <h1 className="builder-header">Build Your Board</h1>
             <div className="menu-container">
                 <Menu pedals={pedals}
                       setPedals={setPedals}

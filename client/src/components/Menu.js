@@ -7,10 +7,13 @@ function Menu({ pedals, isBrandVisible, setIsBrandVisible, setPedalboard }) {
     //     // alert('Clicked')
     //     return !isBrandVisible
     // }
+    const handleSelectPedalboard = () => {
+        alert('Clicked')
+    }
     return (
         <div>
             <h1>Menu</h1>
-            <button>Select Pedalboard</button>
+            <button onClick={handleSelectPedalboard}>Select Pedalboard</button>
             <button>Select Brand</button>
             <button>Select Type</button>
             <button>Select Model</button>
