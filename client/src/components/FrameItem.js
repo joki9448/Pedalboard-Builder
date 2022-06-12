@@ -1,9 +1,15 @@
-function FrameItem({ frameOptions, setSelectedFrame, setIsFrameSelected}) {
+function FrameItem({ frameOptions, 
+                      setSelectedFrame, 
+                      setIsFrameSelected,
+                    }) {
     // console.log(frame)
     return (
-        <div className="frameslist-item" onClick={(e) => {setSelectedFrame(e.target.textContent); setIsFrameSelected(true)}}>
+        <ul className="frameslist-item" 
+            onClick={(e) => {setSelectedFrame(e.target.textContent); setIsFrameSelected(true)}}
+            // onMouseEnter={() =>{setIsFramesSelectVisible(true)}}  
+        >
             { frameOptions }
-        </div>
+        </ul>
     )
 }
 

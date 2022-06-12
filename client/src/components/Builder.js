@@ -69,26 +69,35 @@ function Builder() {
                 <Menu 
                     pedals={pedals}
                     setPedals={setPedals}
+
+                    framesList={framesList}
                     isFramesSelectVisible={isFramesSelectVisible}
                     setIsFramesSelectVisible={setIsFramesSelectVisible}
+                    setSelectedFrame={setSelectedFrame}
+                    setIsFrameSelected={setIsFrameSelected}
+
                     isBrandsListVisible={isBrandsListVisible}
                     setIsBrandsListVisible={setIsBrandsListVisible}
-                    setIsFXListVisible={setIsFXListVisible}
+
                     isFXListVisible={isFXListVisible}  
-                    handleModelClick={handleModelClick}
-                    setIsPedalContainerVisible={setIsPedalContainerVisible}
+                    setIsFXListVisible={setIsFXListVisible}
+                    
                     isPedalContainerVisible={isPedalContainerVisible}
+                    setIsPedalContainerVisible={setIsPedalContainerVisible}
+                    handleModelClick={handleModelClick}
                 />
             </div>
-            {isFramesSelectVisible ? <FramesList 
+            {/* {/* {isFramesSelectVisible ? <FramesList 
                 framesList={framesList} 
                 selectedFrame={selectedFrame} 
                 setSelectedFrame={setSelectedFrame} 
                 setIsFrameSelected={setIsFrameSelected}
                 isFrameSelected={isFrameSelected}
+                isFramesSelectVisible={isFramesSelectVisible}
+                setIsFramesSelectVisible={setIsFramesSelectVisible}
                 /> 
-            : null }
-            {isBrandsListVisible ? <BrandsList 
+            : null } */}
+            {/* {isBrandsListVisible ? <BrandsList 
                 brandsList={brandsList}
                 setSelectedBrand={setSelectedBrand}
                 />
@@ -99,7 +108,7 @@ function Builder() {
             : null}
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
                 /> 
-            : null}
+            : null} */} 
             <button onClick={() => {resetMenu()}}>Reset Search</button>
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard 
