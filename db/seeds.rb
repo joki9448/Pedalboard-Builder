@@ -161,9 +161,9 @@ Pedal.create(brand: "Walrus Audio", model: "Kangra", effect: "Distortion / Gain"
 Pedal.create(brand: "Walrus Audio", model: "Voyager", effect: "Distortion / Gain", config_id: c1.id)
 Pedal.create(brand: "Walrus Audio", model: "Warhorn", effect: "Distortion / Gain", config_id: c1.id)
 
-Pedal.create(brand: "Walrus Audio", model: "Warhorn", effect: "Modulation", config_id: c1.id)
-Pedal.create(brand: "Walrus Audio", model: "Warhorn", effect: "Modulation", config_id: c1.id)
-Pedal.create(brand: "Walrus Audio", model: "Warhorn", effect: "Modulation", config_id: c1.id)
+Pedal.create(brand: "Walrus Audio", model: "Julia", effect: "Modulation", config_id: c1.id)
+Pedal.create(brand: "Walrus Audio", model: "Lillian", effect: "Modulation", config_id: c1.id)
+Pedal.create(brand: "Walrus Audio", model: "Luminary", effect: "Modulation", config_id: c1.id)
 
 Pedal.create(brand: "Walrus Audio", model: "ARP-87", effect: "Reverb / Delay", config_id: c1.id)
 Pedal.create(brand: "Walrus Audio", model: "Descent", effect: "Reverb / Delay", config_id: c1.id)

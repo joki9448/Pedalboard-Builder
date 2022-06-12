@@ -9,7 +9,9 @@ import FxList from './FxList';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+
     const [filteredPedals, setFilteredPedals] = useState([])
+
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
     const [isPedalContainerVisible, setIsPedalContainerVisible] = useState(true)
 
