@@ -8,7 +8,7 @@ function FramesList({
         }){
     
     return (
-        <div>
+        <div className="frameslist-container">
             {
                 framesList.map((frame, i) => {
                     return <FrameItem key={i} frameOptions={frame} setSelectedFrame={setSelectedFrame} selectedFrame={selectedFrame} setIsFrameSelected={setIsFrameSelected}/>
