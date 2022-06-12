@@ -22,3 +22,14 @@
   align-items: center;
 }
 
+.pedals-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* max-height: 25rem;  */
+}
+.pedals-item{
+  display: flex;
+  height: 20rem;
+  width: 20rem;
+}

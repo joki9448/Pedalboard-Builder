@@ -3,7 +3,7 @@ function PedalItem({ pedals }) {
     const { brand, effect, model } = pedals
     return (
         <div className="pedals-item">
-            <img src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}/>
+            <img src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}  alt="pedal"/>
         </div>
     )
 }

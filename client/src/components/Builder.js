@@ -96,7 +96,9 @@ function Builder() {
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
                 /> 
             : null}
+
             <button onClick={() => {resetMenu()}}>Reset Search</button>
+            
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
