@@ -5,19 +5,23 @@ import Pedals from './Pedals';
 import Pedalboard from './Pedalboard';
 import FramesList from './FramesList';
 import BrandsList from './BrandsList';
+import FxList from './FxList';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+    const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
 
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
     const [isFrameSelected, setIsFrameSelected] = useState(false)
 
-    const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
 
     const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Seymour Duncan', 'Darkglass']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
+
+    const effectsList = ['Distortion / Gain', 'Compression / EQ', 'Reverb / Delay', 'Modulation']
+    const [isFXListVisible, setIsFXListVisible] = useState(false)
 
     const request = async () => {
         try {
@@ -49,6 +53,8 @@ function Builder() {
                     setIsFramesSelectVisible={setIsFramesSelectVisible}
                     isBrandsListVisible={isBrandsListVisible}
                     setIsBrandsListVisible={setIsBrandsListVisible}
+                    setIsFXListVisible={setIsFXListVisible}
+                    isFXListVisible={isFXListVisible}    
                 />
             </div>
             {isFramesSelectVisible ? <FramesList 
@@ -63,6 +69,9 @@ function Builder() {
                 brandsList={brandsList}
                 />
             : null }
+            {isFXListVisible ? <FxList effectsList={effectsList} 
+                /> 
+            : null}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame} isFrameSelected={isFrameSelected}/> : null}
         </div>
