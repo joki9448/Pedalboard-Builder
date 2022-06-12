@@ -16,12 +16,13 @@ function Builder() {
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
     const [isFrameSelected, setIsFrameSelected] = useState(false)
 
-
     const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Seymour Duncan', 'Darkglass']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
+    const [selectedBrand, setSelectedBrand] = useState('')
 
-    const effectsList = ['Distortion / Gain', 'Compression / EQ', 'Reverb / Delay', 'Modulation']
+    const effectsList = ['Distortion / Gain', 'Compression / EQ', 'Reverb / Delay', 'Modulation', 'Expression']
     const [isFXListVisible, setIsFXListVisible] = useState(false)
+    const [selectedEffect, setSelectedEffect] = useState('')
 
     const request = async () => {
         try {
@@ -39,6 +40,14 @@ function Builder() {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
 
+    const handleModelClick = (brand, effect) => {
+        // console.log(pedals[0].model)
+        // pedals.map((p) => {
+            
+        //     return 
+        // })
+    }
+
     return (
         <div>
             <Link to="/">
@@ -54,7 +63,8 @@ function Builder() {
                     isBrandsListVisible={isBrandsListVisible}
                     setIsBrandsListVisible={setIsBrandsListVisible}
                     setIsFXListVisible={setIsFXListVisible}
-                    isFXListVisible={isFXListVisible}    
+                    isFXListVisible={isFXListVisible}  
+                    handleModelClick={handleModelClick}
                 />
             </div>
             {isFramesSelectVisible ? <FramesList 
@@ -67,13 +77,19 @@ function Builder() {
             : null }
             {isBrandsListVisible ? <BrandsList 
                 brandsList={brandsList}
+                setSelectedBrand={setSelectedBrand}
                 />
             : null }
             {isFXListVisible ? <FxList effectsList={effectsList} 
+                setSelectedEffect={setSelectedEffect}
                 /> 
             : null}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
-            {isBoardContainerVisible ? <Pedalboard selectedFrame={selectedFrame} isFrameSelected={isFrameSelected}/> : null}
+            {isBoardContainerVisible ? <Pedalboard 
+                selectedFrame={selectedFrame} 
+                isFrameSelected={isFrameSelected}
+                /> 
+            : null}
         </div>
     )
 }

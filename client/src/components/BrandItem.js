@@ -1,6 +1,6 @@
-function BrandItem({ brandItems }) {
+function BrandItem({ brandItems, setSelectedBrand }) {
     return (
-        <div className="brand-item">
+        <div className="brand-item" onClick={(e) => {setSelectedBrand(e.target.textContent)}}>
             {brandItems}
         </div>
     )

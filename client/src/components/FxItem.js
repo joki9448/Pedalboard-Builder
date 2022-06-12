@@ -1,6 +1,6 @@
-function FxItem({ effect }) {
+function FxItem({ effect, setSelectedEffect }) {
     return (
-        <div className="fx-item">
+        <div className="fx-item" onClick={(e) => {setSelectedEffect(e.target.textContent)}}>
             { effect }
         </div>
     )
