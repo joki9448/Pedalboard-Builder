@@ -5,8 +5,7 @@ function FramesList({
         setSelectedFrame, 
         selectedFrame, 
         setIsFrameSelected 
-        }) 
-    {
+        }){
     
     return (
         <div>
@@ -16,10 +15,6 @@ function FramesList({
                 })
             }
         </div>
-        // <div className="frame" onClick={() => {setFrameState(frameState)}}>
-        //     {/* <img src={`/images/Frames/${frames}.jpeg`} alt="pedalboard-frame"/> */}
-        //     {/* <h1>{frameState}</h1> */}
-        // </div>
     )
 }
 

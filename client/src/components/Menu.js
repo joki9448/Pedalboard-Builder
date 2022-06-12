@@ -4,14 +4,7 @@ function Menu({
                 isBrandsListVisible,
                 setIsBrandsListVisible
             }){
-    // const handleBrandClick = () => {
-    //     // alert('Clicked')
-    //     return !isBrandVisible
-    // }
-    // const handleSelectPedalboard = (e) => {
-    //     // alert('Clicked')
-    //     setPedalboard(e.target.textContent)
-    // }
+                
     return (
         <div className="menu-container">
             <h1>Menu</h1>

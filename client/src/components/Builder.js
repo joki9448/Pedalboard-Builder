@@ -16,7 +16,7 @@ function Builder() {
 
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
 
-    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Darkglass']
+    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Seymour Duncan', 'Darkglass']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
 
     const request = async () => {

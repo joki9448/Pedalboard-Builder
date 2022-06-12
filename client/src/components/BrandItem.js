@@ -1,7 +1,6 @@
 function BrandItem({ brandItems }) {
-    console.log(brandItems)
     return (
-        <div>
+        <div className="brand-item">
             {brandItems}
         </div>
     )

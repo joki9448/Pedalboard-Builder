@@ -2,10 +2,10 @@ import BrandItem from './BrandItem';
 
 function BrandsList({ brandsList }) {
     return (
-        <div>
+        <div className="brands-container">
             {
                 brandsList.map((b, i) => {
-                    <BrandItem key={i} brandItems={b}/>
+                   return <BrandItem key={i} brandItems={b}/>
                 })
             }
         </div>
