@@ -1,5 +1,6 @@
 import FramesList from './FramesList';
 import BrandsList from './BrandsList';
+import FxList from './FxList'
 
 function Menu({
                 isFramesSelectVisible,
@@ -11,8 +12,10 @@ function Menu({
                 isBrandsListVisible,
                 setIsBrandsListVisible,
                 setSelectedBrand,
+                effectsList,
                 isFXListVisible,
                 setIsFXListVisible,
+                setSelectedEffect,
                 handleModelClick,
             }){
                 
@@ -36,16 +39,15 @@ function Menu({
                 /> 
                 : null}
             </div>
-            {/* <button onClick={() => setIsFramesSelectVisible(!isFramesSelectVisible)}>Select Pedalboard</button> */}
-            {/* <button className="menu-select-button" 
-                    onMouseEnter={() => {setIsFramesSelectVisible(true)}} 
-                    onMouseLeave={() => {setIsFramesSelectVisible(false)}}
-            >
-                Select Pedalboard
-            </button> */}
-            {/* <button onClick={() => setIsBrandsListVisible(!isBrandsListVisible)}>Select Brand</button>
-            <button onClick={() => setIsFXListVisible(!isFXListVisible)}>Select Type</button>
-            <button onClick={() => {handleModelClick()}}>Select Model</button> */}
+            <div className="frames-dropdown" onMouseEnter={() => {setIsFXListVisible(true)}} onMouseLeave={() => {setIsFXListVisible(false)}}>
+                Select Effect
+                {isFXListVisible ? <FxList 
+                    effectsList={effectsList}
+                    setSelectedEffect={setSelectedEffect}
+                /> 
+                : null}
+            </div>
+            <button onClick={() => {handleModelClick()}}>Select Model</button>
         </div>
     )
 }

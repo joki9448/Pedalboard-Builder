@@ -81,36 +81,21 @@ function Builder() {
                     setIsBrandsListVisible={setIsBrandsListVisible}
                     setSelectedBrand={setSelectedBrand}
 
+                    effectsList={effectsList}
                     isFXListVisible={isFXListVisible}  
                     setIsFXListVisible={setIsFXListVisible}
+                    setSelectedEffect={setSelectedEffect}
 
                     isPedalContainerVisible={isPedalContainerVisible}
                     setIsPedalContainerVisible={setIsPedalContainerVisible}
+
+
                     handleModelClick={handleModelClick}
                 />
             </div>
-            {/* {/* {isFramesSelectVisible ? <FramesList 
-                framesList={framesList} 
-                selectedFrame={selectedFrame} 
-                setSelectedFrame={setSelectedFrame} 
-                setIsFrameSelected={setIsFrameSelected}
-                isFrameSelected={isFrameSelected}
-                isFramesSelectVisible={isFramesSelectVisible}
-                setIsFramesSelectVisible={setIsFramesSelectVisible}
-                /> 
-            : null } */}
-            {/* {isBrandsListVisible ? <BrandsList 
-                brandsList={brandsList}
-                setSelectedBrand={setSelectedBrand}
-                />
-            : null }
-            {isFXListVisible ? <FxList effectsList={effectsList} 
-                setSelectedEffect={setSelectedEffect}
-                /> 
-            : null}
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
                 /> 
-            : null} */} 
+            : null}
             <button onClick={() => {resetMenu()}}>Reset Search</button>
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard 
