@@ -11,7 +11,7 @@ function Builder() {
     const [pedals, setPedals] = useState([])
     const [filteredPedals, setFilteredPedals] = useState([])
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
-    const [isPedalContainerVisible, setIsPedalContainerVisible] = useState(false)
+    const [isPedalContainerVisible, setIsPedalContainerVisible] = useState(true)
 
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
@@ -38,6 +38,12 @@ function Builder() {
     }
     useEffect(() => {request()}, [filteredPedals])
 
+    const resetMenu = () => {
+        setSelectedBrand('')
+        setSelectedEffect('')
+        setFilteredPedals([])
+    }
+
     const handleBoardVisibleClick = () => {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
@@ -48,7 +54,6 @@ function Builder() {
     }
     const handleModelClick = () => {
             let f = pedals.filter(filterByBrandAndEffect)
-            setIsPedalContainerVisible(!isPedalContainerVisible)
             setFilteredPedals(f)
     }
 
@@ -93,6 +98,7 @@ function Builder() {
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
                 /> 
             : null}
+            <button onClick={() => {resetMenu()}}>Reset Search</button>
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
