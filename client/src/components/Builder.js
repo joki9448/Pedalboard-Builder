@@ -40,12 +40,9 @@ function Builder() {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
 
-    const handleModelClick = (brand, effect) => {
-        // console.log(pedals[0].model)
-        // pedals.map((p) => {
-            
-        //     return 
-        // })
+    const handleModelClick = () => {
+        pedals.filter((p) => console.log(p.brand === selectedBrand))
+        
     }
 
     return (

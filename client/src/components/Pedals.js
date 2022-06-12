@@ -1,8 +1,8 @@
-function Pedals({ pedals }) {
-    // console.log(pedals)
-
+function Pedals({ models }) {
+    console.log(models)
     return (
         <div>
+            {models}
         </div>
     )
 }
