@@ -21,9 +21,9 @@ function Menu({
                 
     return (
         <div className="menu-container">
-            <h1>Menu</h1>
+            {/* <h1 className="menu-header">Menu</h1> */}
             <div className="frames-dropdown" onMouseEnter={() => {setIsFramesSelectVisible(true)}} onMouseLeave={() => {setIsFramesSelectVisible(false)}}>
-                Select Pedalboard Frame
+                Select Board
                 {isFramesSelectVisible ? <FramesList 
                     framesList={framesList}
                     setSelectedFrame={setSelectedFrame}
@@ -47,7 +47,7 @@ function Menu({
                 /> 
                 : null}
             </div>
-            <button onClick={() => {handleModelClick()}}>Select Model</button>
+            <button className="menu-pedals-button"onClick={() => {handleModelClick()}}>Select Model</button>
         </div>
     )
 }
