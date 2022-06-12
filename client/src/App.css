@@ -38,7 +38,7 @@
 .pedalboard-container {
   display: flex;
   flex-direction: row;
-  height: 40rem;
-  width: 40rem;
+  height: 35rem;
+  width: 35rem;
   z-index: 1;
 }
