@@ -76,12 +76,14 @@ function Builder() {
                     setSelectedFrame={setSelectedFrame}
                     setIsFrameSelected={setIsFrameSelected}
 
+                    brandsList={brandsList}
                     isBrandsListVisible={isBrandsListVisible}
                     setIsBrandsListVisible={setIsBrandsListVisible}
+                    setSelectedBrand={setSelectedBrand}
 
                     isFXListVisible={isFXListVisible}  
                     setIsFXListVisible={setIsFXListVisible}
-                    
+
                     isPedalContainerVisible={isPedalContainerVisible}
                     setIsPedalContainerVisible={setIsPedalContainerVisible}
                     handleModelClick={handleModelClick}

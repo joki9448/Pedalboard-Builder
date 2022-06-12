@@ -1,5 +1,5 @@
 import FramesList from './FramesList';
-
+import BrandsList from './BrandsList';
 
 function Menu({
                 isFramesSelectVisible,
@@ -7,8 +7,10 @@ function Menu({
                 framesList,
                 setSelectedFrame,
                 setIsFrameSelected,
+                brandsList,
                 isBrandsListVisible,
                 setIsBrandsListVisible,
+                setSelectedBrand,
                 isFXListVisible,
                 setIsFXListVisible,
                 handleModelClick,
@@ -23,6 +25,14 @@ function Menu({
                     framesList={framesList}
                     setSelectedFrame={setSelectedFrame}
                     setIsFrameSelected={setIsFrameSelected}
+                /> 
+                : null}
+            </div>
+            <div className="frames-dropdown" onMouseEnter={() => {setIsBrandsListVisible(true)}} onMouseLeave={() => {setIsBrandsListVisible(false)}}>
+                Select Brand
+                {isBrandsListVisible ? <BrandsList 
+                    brandsList={brandsList}
+                    setSelectedBrand={setSelectedBrand}
                 /> 
                 : null}
             </div>
