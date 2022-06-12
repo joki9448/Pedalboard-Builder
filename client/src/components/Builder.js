@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Menu from './Menu';
-import Pedals from './Pedals';
+import PedalsContainer from './PedalsContainer';
 import Pedalboard from './Pedalboard';
 import FramesList from './FramesList';
 import BrandsList from './BrandsList';
@@ -9,7 +9,9 @@ import FxList from './FxList';
 
 function Builder() {
     const [pedals, setPedals] = useState([])
+    const [filteredPedals, setFilteredPedals] = useState([])
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
+    const [isPedalContainerVisible, setIsPedalContainerVisible] = useState(false)
 
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
@@ -34,15 +36,20 @@ function Builder() {
             alert(error.message)
         }
     }
-    useEffect(() => {request()}, [])
+    useEffect(() => {request()}, [filteredPedals])
 
     const handleBoardVisibleClick = () => {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
 
+    const filterByBrandAndEffect = (p) => {
+        if (p.brand === selectedBrand && p.effect === selectedEffect)
+        return true
+    }
     const handleModelClick = () => {
-        pedals.filter((p) => console.log(p.brand === selectedBrand))
-        
+            let f = pedals.filter(filterByBrandAndEffect)
+            setIsPedalContainerVisible(!isPedalContainerVisible)
+            setFilteredPedals(f)
     }
 
     return (
@@ -62,6 +69,8 @@ function Builder() {
                     setIsFXListVisible={setIsFXListVisible}
                     isFXListVisible={isFXListVisible}  
                     handleModelClick={handleModelClick}
+                    setIsPedalContainerVisible={setIsPedalContainerVisible}
+                    isPedalContainerVisible={isPedalContainerVisible}
                 />
             </div>
             {isFramesSelectVisible ? <FramesList 
@@ -79,6 +88,9 @@ function Builder() {
             : null }
             {isFXListVisible ? <FxList effectsList={effectsList} 
                 setSelectedEffect={setSelectedEffect}
+                /> 
+            : null}
+            {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
                 /> 
             : null}
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>

@@ -14,7 +14,7 @@ function Menu({
             <button onClick={() => setIsFramesSelectVisible(!isFramesSelectVisible)}>Select Pedalboard</button>
             <button onClick={() => setIsBrandsListVisible(!isBrandsListVisible)}>Select Brand</button>
             <button onClick={() => setIsFXListVisible(!isFXListVisible)}>Select Type</button>
-            <button onClick={() => handleModelClick()}>Select Model</button>
+            <button onClick={() => {handleModelClick()}}>Select Model</button>
         </div>
     )
 }
