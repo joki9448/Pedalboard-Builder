@@ -6,7 +6,6 @@ function Pedalboard({ selectedFrame, isFrameSelected }) {
     }
     return (
         <div className="pedalboard-container">
-            <h1>Pedalboard</h1>
             <img src={`/images/Frames/${selectedFrame}.jpeg`}/>
         </div>
     )
