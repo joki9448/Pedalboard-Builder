@@ -1,7 +1,7 @@
 import PedalItem from './PedalItem'
 
 function PedalsContainer({ filteredPedals }) {
-    console.log('from pedalscontainer', filteredPedals)
+    // console.log('from pedalscontainer', filteredPedals)
     return (
         <div className="pedals-container">
             {

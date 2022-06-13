@@ -1,5 +1,6 @@
 
 function Pedalboard({ selectedFrame, isFrameSelected }) {
+    // console.log('from pedalboard: ', board)
 
     if(isFrameSelected === false) {
         return "Please select a pedalboard!"

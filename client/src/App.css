@@ -40,5 +40,12 @@
   flex-direction: row;
   height: 35rem;
   width: 35rem;
-  z-index: 1;
+  /* z-index: 1; */
+}
+
+
+.board {
+  width: 300px;
+  height: 500px;
+  border: 2px solid black;
 }
