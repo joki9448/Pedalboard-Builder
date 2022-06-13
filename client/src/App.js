@@ -4,6 +4,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import React from 'react';
 import Navigation from './components/Navigation';
 import Builder from './components/Builder';
@@ -16,13 +18,15 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Navigation />
+            <Navigation className="nav-page"/>
           </Route>
           <Route exact path="/builder">
-            <Builder />
+            <DndProvider backend={HTML5Backend}>
+              <Builder className="builder-page"/>
+            </DndProvider>
           </Route>
           <Route exact path="/collection">
-            <Collection />
+            <Collection className="collection-page"/>
           </Route>
         </Switch>
       </Router>
