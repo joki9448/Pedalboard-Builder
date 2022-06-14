@@ -3,18 +3,54 @@ import { useEffect, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
+// import SelectedPedals from './SelectedPedals';
 import Pedalboard from './Pedalboard';
-import PedalItem from './PedalItem';
+// import PedalItem from './PedalItem';
 
 function Builder() {
-    const [pedals, setPedals] = useState([])
 
-    const [filteredPedals, setFilteredPedals] = useState([])
-    console.log('global filteredPedals ', filteredPedals)
 
+    // console.log('wtf is happening ????????????????????')
+
+    // const [pedals, setPedals] = useState([])
+    // const [filteredPedals, setFilteredPedals] = useState([])
+    // const [droppedPedals, setDroppedPedals] = useState([])
+    const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
+
+    // console.log('state of filteredPedals after setting filters: ', filteredPedals)
+
+        
+    const request = async () => {
+        try {
+            let req = await fetch('/pedals')
+            let res = await req.json()
+            console.log('res', res)
+            setPedals(prevState => {
+              return {...prevState, ['all']: res}
+            })
+        }   catch (error) {
+            alert(error.message)
+        }
+    }
+
+    useEffect(() => {
+        request()
+    }, [])
+
+    // For filtering pedals in menu
+    const handleModelClick = () => {
+        let f = pedals.all.filter((ped) => ped.brand === selectedBrand && ped.effect === selectedEffect)
+        setPedals(prevState => {
+            return {...prevState, filtered: f}
+        })
+        console.log('filtered', pedals.filtered)
+    }
+
+    // Toggle pedalboard view
     const [isBoardContainerVisible, setIsBoardContainerVisible] = useState(false)
     const [isPedalContainerVisible, setIsPedalContainerVisible] = useState(true)
 
+    // Menu State
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
     const [selectedFrame, setSelectedFrame] = useState('')
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
@@ -28,61 +64,71 @@ function Builder() {
     const [isFXListVisible, setIsFXListVisible] = useState(false)
     const [selectedEffect, setSelectedEffect] = useState('')
 
-    const [board, setBoard] = useState([])
+    // React DnD
+
     const [{isOver}, drop] = useDrop(() => ({
         accept: "image",
-        drop: (item) => addImageToBoard(item.id),
-        collect: (monitor) => ({
+        drop: (item) => addImageToBoard(item),
+        collect: (monitor) => ({ 
             isOver: !!monitor.isOver()
         })
     }))
 
-    const addImageToBoard = (id) => {
-        const pedalList = filteredPedals.filter((picture) => id === picture.id);
-        setBoard((board) => [...board, pedalList[0]])
+    const addImageToBoard = (droppedPedal) => {
+        console.log('id of the pedal being dragged: ', droppedPedal)
+        console.log('PEDALS', pedals)
+        // const droppedPedal = pedals.all.find((pedal) => {
+        //     console.log('filtered ped', pedal)
+        //     return id == pedal.id
+        // })
+        // setPedals(prevState => {
+        //     return {...prevState, ['dropped']: [...prevState.dropped, droppedPedal]}
+        // })
+        setPedals({all: [...pedals.all], filtered: [...pedals.filtered], dropped: [...pedals.dropped, droppedPedal]})
+        console.log('dropped pedals', pedals.dropped)
+        // console.log('dropped images array (inside addImageToBoard): ', droppedPedal[0])
+        // setDroppedPedals((board) => [...board, droppedPedal])
     }
-    
-    const request = async () => {
-        try {
-            let req = await fetch('/pedals')
-            let res = await req.json()
-            setPedals(res)
-        }   catch (error) {
-            alert(error.message)
-        }
-    }
-    useEffect(() => {request()}, [filteredPedals])
+
 
     const resetMenu = () => {
         setSelectedBrand('')
         setSelectedEffect('')
-        setFilteredPedals([])
-    }
+        // setPedals({all: [], filtered: [], dropped: []})
+    } 
+
+    // Callbacks
 
     const handleBoardVisibleClick = () => {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
 
     const filterByBrandAndEffect = (p) => {
-        if (p.brand === selectedBrand && p.effect === selectedEffect)
-        return p
+      return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
-    const handleModelClick = () => {
-            let f = pedals.filter(filterByBrandAndEffect)
-            setFilteredPedals(f)
-            console.log('just after setting filtered pedals ', filteredPedals)
+
+    const handleDragOver = (e) => {
+        e.preventDefault()
+        let model = e.dataTransfer.getData("model")
+        let id = e.dataTransfer.getData("id")
+        console.log('Dragged item V', model, id)
+        let foundPedal = pedals.all.find((ped) => ped.id == id)
+        setPedals(prevState => {
+            return {...prevState, ['dropped']: [...prevState.dropped, foundPedal]}
+        })
     }
 
     return (
         <div>
+            <h1>{pedals.all?.length}</h1>
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
             <h1 className="builder-header">Build Your Board</h1>
             <div>
                 <Menu 
-                    pedals={pedals}
-                    setPedals={setPedals}
+                    // pedals={pedals}
+                    // setPedals={setPedals}
 
                     framesList={framesList}
                     isFramesSelectVisible={isFramesSelectVisible}
@@ -103,11 +149,10 @@ function Builder() {
                     isPedalContainerVisible={isPedalContainerVisible}
                     setIsPedalContainerVisible={setIsPedalContainerVisible}
 
-
                     handleModelClick={handleModelClick}
                 />
             </div>
-            {isPedalContainerVisible ? <PedalsContainer filteredPedals={filteredPedals}
+            {isPedalContainerVisible ? <PedalsContainer filteredPedals={pedals.filtered}
                 /> 
             : null}
 
@@ -119,11 +164,25 @@ function Builder() {
                 isFrameSelected={isFrameSelected}
                 /> 
             : null}
-            <div className="board" ref={drop}>
-                {board.map((p, i) => {
-                    return <PedalItem id={p.id} pedals={p}/>
-                })}
 
+            {/* Drop area testing */}
+            <div className="board" onDrop={handleDragOver}>
+                {/* {console.log('dropped pedals array: ', droppedPedals)} */}
+                {/* {
+                    board.map((p, i) => {
+                        console.log('dropping pedals: ', p)
+                        // return <SelectedPedals key={i} p={p} />
+                    })
+                } */}
+                {
+                  pedals.dropped.map((p) => {
+                    return(
+                      <div key={p.id}>
+                        <p>{p.model} - {p.id}</p>
+                      </div>
+                    )
+                  })
+                }
             </div>
         </div>
     )
