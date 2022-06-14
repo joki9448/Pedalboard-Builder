@@ -47,7 +47,7 @@ function Menu({
                 /> 
                 : null}
             </div>
-            <button className="menu-pedals-button"onClick={() => {handleModelClick()}}>Select Model</button>
+            <button className="menu-pedals-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
         </div>
     )
 }

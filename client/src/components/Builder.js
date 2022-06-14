@@ -3,12 +3,11 @@ import { useEffect, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
-// import SelectedPedals from './SelectedPedals';
+import SelectedPedal from './SelectedPedal';
 import Pedalboard from './Pedalboard';
 // import PedalItem from './PedalItem';
 
 function Builder() {
-
 
     // console.log('wtf is happening ????????????????????')
 
@@ -19,7 +18,6 @@ function Builder() {
 
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
 
-        
     const request = async () => {
         try {
             let req = await fetch('/pedals')
@@ -52,9 +50,9 @@ function Builder() {
 
     // Menu State
     const framesList = ['BCB-30X', 'BCB-90X', 'BCB-1000', 'PROFX', 'PT-MMAX', 'PT-NMAX', 'PT3', 'PTJR-MAX']
-    const [selectedFrame, setSelectedFrame] = useState('')
     const [isFramesSelectVisible, setIsFramesSelectVisible] = useState(false)
     const [isFrameSelected, setIsFrameSelected] = useState(false)
+    const [selectedFrame, setSelectedFrame] = useState('')
 
     const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Seymour Duncan', 'Darkglass']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
@@ -94,7 +92,7 @@ function Builder() {
     const resetMenu = () => {
         setSelectedBrand('')
         setSelectedEffect('')
-        // setPedals({all: [], filtered: [], dropped: []})
+        setPedals({all: [], filtered: [], dropped: []})
     } 
 
     // Callbacks
@@ -120,7 +118,7 @@ function Builder() {
 
     return (
         <div>
-            <h1>{pedals.all?.length}</h1>
+            {/* <h1>{pedals.all?.length}</h1> */}
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
@@ -152,6 +150,7 @@ function Builder() {
                     handleModelClick={handleModelClick}
                 />
             </div>
+
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={pedals.filtered}
                 /> 
             : null}
@@ -159,6 +158,7 @@ function Builder() {
             <button onClick={() => {resetMenu()}}>Reset Search</button>
 
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
+
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
                 isFrameSelected={isFrameSelected}
@@ -168,17 +168,12 @@ function Builder() {
             {/* Drop area testing */}
             <div className="board" onDrop={handleDragOver}>
                 {/* {console.log('dropped pedals array: ', droppedPedals)} */}
-                {/* {
-                    board.map((p, i) => {
-                        console.log('dropping pedals: ', p)
-                        // return <SelectedPedals key={i} p={p} />
-                    })
-                } */}
                 {
                   pedals.dropped.map((p) => {
                     return(
                       <div key={p.id}>
                         <p>{p.model} - {p.id}</p>
+                        <SelectedPedal p={p}/>
                       </div>
                     )
                   })
