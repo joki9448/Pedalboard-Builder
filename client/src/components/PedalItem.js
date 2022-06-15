@@ -20,7 +20,7 @@ function PedalItem({ pedals }) {
     return (
         <div className="pedals-item" onDragStart={handleDrag} draggable="true">
             <img
-                style={{border: isDragging ? "5px solid pink" : "0xp"}} 
+                style={{border: isDragging ? "6px dotted blueviolet" : "0px"}} 
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
         </div>
