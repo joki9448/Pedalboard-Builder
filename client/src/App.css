@@ -50,11 +50,11 @@
 
 .selectedpedals-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   /* flex-wrap: wrap; */
   /* justify-content: right; */
-  height: 1000px;
-  width: 1000px;
+  height: 100rem;
+  width: 1000rem;
   gap: 10px;
 }
 
