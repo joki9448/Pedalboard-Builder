@@ -37,7 +37,6 @@
 
 .pb-window {
   display: flex;
-  flex-direction: row;
   height: 35rem;
   width: 35rem;
 }
@@ -46,16 +45,17 @@
   position: absolute;
   height: 800px;
   width: 1500px;
+  z-index: -1;
 }
 
 .selectedpedals-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-top: 20%;
-  margin-left: 75%;
-  gap: 40px;
-  z-index: 1;
+  /* flex-wrap: wrap; */
+  /* justify-content: right; */
+  height: 1000px;
+  width: 1000px;
+  gap: 10px;
 }
 
 .selectedpedal {
