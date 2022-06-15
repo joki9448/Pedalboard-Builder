@@ -108,8 +108,21 @@ function Builder() {
         let id = e.dataTransfer.getData("id")
         console.log('Dragged item V', model, id)
         let foundPedal = pedals.all.find((ped) => ped.id == id)
-        setPedals(prevState => {
-            return {...prevState, ['dropped']: [...prevState.dropped, foundPedal]}
+        
+        setPedals((prevState) => {
+            // console.log('dropped pedal objs', prevState.dropped)
+
+            let droppedIds = []
+            let stopDuplicates = prevState.dropped.filter((p) => {
+                droppedIds.push(p.id)
+                return droppedIds
+                // console.log('foundPedal obj in stopduplicates', foundPedal.id)
+            })
+            // console.log('dropped ids', droppedIds)
+            if (!droppedIds.includes(foundPedal.id))
+                return {...prevState, ['dropped']: [...prevState.dropped, foundPedal]}
+            else
+                return {...prevState, ['dropped']: [...prevState.dropped]}
         })
     }
 
