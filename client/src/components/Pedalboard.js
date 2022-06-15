@@ -1,4 +1,5 @@
 import SelectedPedals from './SelectedPedals';
+import PedalItem from './PedalItem';
 
 
 function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
@@ -8,20 +9,20 @@ function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
         return "Please select a pedalboard!"
     }
     return (
-        <div className="pedalboard-container" onDrop={onDrop}>
-            <div className="selectedpedals-img">
+        <div className="pb-window" onDrop={onDrop}>
+            <div className="selectedpedals-container">
                 {
                     pedals.dropped.map((p) => {
                         return(
                             <div key={p.id}>
                                 {/* <p>{p.model} - {p.id}</p> */}
                                 <SelectedPedals p={p}/>
-                            </div>
+                           </div>
                         )
                     })
                 }
-                <img className="pedalboard-img" src={`/images/Frames/${selectedFrame}.jpeg`}/>
             </div>
+            <img className="pb-img" src={`/images/Frames/${selectedFrame}.jpeg`}/>
         </div>
     )
 }

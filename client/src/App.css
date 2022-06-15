@@ -35,24 +35,27 @@
   width: 18rem;
 }
 
-.pedalboard-container {
+.pb-window {
   display: flex;
   flex-direction: row;
   height: 35rem;
   width: 35rem;
 }
 
+.pb-img {
+  position: absolute;
+  height: 800px;
+  width: 1500px;
+}
 
-.selectedpedals-img {
+.selectedpedals-container {
   display: flex;
   flex-direction: row;
-  height: 18rem;
-  width: 18rem;
+  gap: 40px;
   z-index: 1;
 }
 
-.pedalboard-img {
-  height: 50rem;
-  width: 50rem;
-  z-index: -1;
+.selectedpedal {
+  height: 20rem;
 }
+

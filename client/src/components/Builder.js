@@ -8,8 +8,6 @@ import Pedalboard from './Pedalboard';
 
 function Builder() {
 
-    // console.log('wtf is happening ????????????????????')
-
     // const [pedals, setPedals] = useState([])
     // const [filteredPedals, setFilteredPedals] = useState([])
     // const [droppedPedals, setDroppedPedals] = useState([])
@@ -88,11 +86,11 @@ function Builder() {
     }
 
 
-    const resetMenu = () => {
-        setSelectedBrand('')
-        setSelectedEffect('')
-        setPedals({all: [], filtered: [], dropped: []})
-    } 
+    // const resetMenu = () => {
+    //     setSelectedBrand('')
+    //     setSelectedEffect('')
+    //     setPedals({all: [], filtered: [], dropped: []})
+    // } 
 
     // Callbacks
 
@@ -154,7 +152,7 @@ function Builder() {
                 /> 
             : null}
 
-            <button onClick={() => {resetMenu()}}>Reset Search</button>
+            {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
             <button className="window-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
 
