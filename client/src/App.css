@@ -51,11 +51,14 @@
 .selectedpedals-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-top: 20%;
+  margin-left: 75%;
   gap: 40px;
   z-index: 1;
 }
 
 .selectedpedal {
-  height: 20rem;
+  height: 18rem;
 }
 
