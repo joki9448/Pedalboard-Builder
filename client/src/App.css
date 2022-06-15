@@ -40,13 +40,19 @@
   flex-direction: row;
   height: 35rem;
   width: 35rem;
-  /* z-index: 1; */
 }
 
 
-.board {
-  width: 800px;
-  height: 800px;
-  /* border: 5px solid black;
-  margin-top: 15%; */
+.selectedpedals-img {
+  display: flex;
+  flex-direction: row;
+  height: 18rem;
+  width: 18rem;
+  z-index: 1;
+}
+
+.pedalboard-img {
+  height: 50rem;
+  width: 50rem;
+  z-index: -1;
 }

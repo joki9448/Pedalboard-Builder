@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
-import SelectedPedal from './SelectedPedal';
 import Pedalboard from './Pedalboard';
 // import PedalItem from './PedalItem';
 
@@ -162,23 +161,25 @@ function Builder() {
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
                 isFrameSelected={isFrameSelected}
+                onDrop={handleDragOver}
+                pedals={pedals}
                 /> 
             : null}
 
             {/* Drop area testing */}
-            <div className="board" onDrop={handleDragOver}>
-                {/* {console.log('dropped pedals array: ', droppedPedals)} */}
+            {/* <div className="board" onDrop={handleDragOver}>
+                {console.log('dropped pedals array: ', droppedPedals)}
                 {
                   pedals.dropped.map((p) => {
                     return(
                       <div key={p.id}>
                         <p>{p.model} - {p.id}</p>
-                        <SelectedPedal p={p}/>
+                        <SelectedPedals p={p}/>
                       </div>
                     )
                   })
                 }
-            </div>
+            </div> */}
         </div>
     )
 }
