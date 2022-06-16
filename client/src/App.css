@@ -113,8 +113,8 @@ body {
 }
 .nav-img-1:hover, .nav-img-2:hover {
   filter: grayscale(0%);
-  transform: scale(1.25);
-  transition: transform 10s ease;
+  transform: scale(3);
+  transition: transform 100s ease-out;
 }
 
 .nav-text-1 {
