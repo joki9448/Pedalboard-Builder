@@ -81,7 +81,7 @@ body {
   overflow: hidden;
   max-height: 65vh;
   max-width: 88vw;
-  margin-top: 11%;
+  margin-top: 10%;
   margin-left: 2%;
   box-shadow: 1rem 1rem #FF87F8, -1rem -1rem purple;
 }
@@ -111,9 +111,9 @@ body {
 
 .nav-text-1 {
   position: absolute;
-  margin-top: 8%;
+  margin-top: 7%;
   margin-left: 65%;
-  border: 2px solid teal;
+  border: 2px solid white;
   color: white;
   padding: 1% 1%;
   max-width: 50%;
@@ -124,9 +124,9 @@ body {
 
 .nav-text-2 {
   position: absolute;
-  margin-top: 70%;
-  margin-left: 5%;
-  border: 2px solid teal;
+  margin-top: 67%;
+  margin-left: 3%;
+  border: 2px solid white;
   color: white;
   padding: 1% 1%;
   max-width: 30%;
