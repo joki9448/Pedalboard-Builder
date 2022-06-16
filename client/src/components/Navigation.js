@@ -4,7 +4,7 @@ function Navigation() {
     
     return (
         <div className="home-container">
-            <h1>Pedalboard Builder</h1>
+            {/* <h1>Pedalboard Builder</h1> */}
             <nav className="nav">
                     <Link to="/builder">
                         <div className="nav-img-container-1">
