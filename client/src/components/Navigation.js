@@ -4,7 +4,7 @@ function Navigation() {
     
     return (
         <div className="home-container">
-            {/* <h1>Pedalboard Builder</h1> */}
+            <h1>Pedalboard Builder</h1>
             <nav className="nav">
                     <Link to="/builder">
                         <div className="nav-img-container-1">
@@ -13,10 +13,12 @@ function Navigation() {
                     </Link>
                     <Link to="/collection">
                         <div className="nav-img-container-2">
+                            <p className="nav-text">
+                                Your Collection
+                            </p>
                             <img className="nav-img-2" alt="collection" src="/images/toboardcollection.jpeg"/>
                         </div>
                     </Link>
-                        {/* <div className="content"> Hello World </div>  */}
             </nav>
         </div>
     )
