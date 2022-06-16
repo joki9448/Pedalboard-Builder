@@ -5,6 +5,7 @@ function Navigation() {
     return (
         <div className="home-container">
             <h1>Pedalboard Builder</h1>
+            <div className="whitescreen"></div>
             <p className="nav-text-2">
                 Your Collection
             </p>
