@@ -1,5 +1,5 @@
 body {
-  background-color: #858585;
+  background-color: #242424;
 }
 
 /* .pedalboard-container {
@@ -81,6 +81,8 @@ body {
   max-width: 88vw;
   margin-top: 11%;
   margin-left: 2%;
+  box-shadow: 0px 0px 5px 5px teal;
+  /* box-shadow: 1.5rem 1.5rem , -1.5rem -1.5rem black; */
 }
 .nav-img-container-2 {
   display: flex;
@@ -92,6 +94,8 @@ body {
   max-height: 65vh;
   max-width: 88vw;
   margin-left: 10%;
+  box-shadow: 0px 0px 5px 5px teal;
+  /* box-shadow: 1.5rem 1.5rem white, -1.5rem -1.5rem black; */
 }
 .nav-img-1 {
   height: 100vh;
