@@ -99,7 +99,7 @@ function Builder() {
     }
 
     const filterByBrandAndEffect = (p) => {
-      return (p.brand === selectedBrand && p.effect === selectedEffect)
+      return (p.brand === selectedBrand || p.effect === selectedEffect)
     }
 
     const handleDragOver = (e) => {
