@@ -8,7 +8,6 @@ function PedalsContainer({ filteredPedals }) {
                 filteredPedals.map((p, i) => {
                     return(
                         <div key={i}>
-                            <p>Test Pedal: {p.id}</p>
                             <PedalItem pedals={p}/>
                         </div>
                     )
