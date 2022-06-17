@@ -22,7 +22,7 @@ function Menu({
     return (
         <div className="menu-container">
             {/* <h1 className="menu-header">Menu</h1> */}
-            <div className="dropdown-list" onClick={() => {setIsFramesSelectVisible(!isFramesSelectVisible)}}>
+            <div className="dropdown-list" onMouseEnter={() => {setIsFramesSelectVisible(true)}} onMouseLeave={() => {setIsFramesSelectVisible(false)}}>
                 Select Board
                 {isFramesSelectVisible ? <FramesList 
                     framesList={framesList}
@@ -31,7 +31,7 @@ function Menu({
                 /> 
                 : null}
             </div>
-            <div className="dropdown-list" onClick={() => {setIsBrandsListVisible(!isBrandsListVisible)}}>
+            <div className="dropdown-list" onMouseEnter={() => {setIsBrandsListVisible(true)}} onMouseLeave={() => {setIsBrandsListVisible(false)}}>
                 Select Brand
                 {isBrandsListVisible ? <BrandsList 
                     brandsList={brandsList}
@@ -39,7 +39,7 @@ function Menu({
                 /> 
                 : null}
             </div>
-            <div className="dropdown-list" onClick={() => {setIsFXListVisible(!isFXListVisible)}}>
+            <div className="dropdown-list" onMouseEnter={() => {setIsFXListVisible(true)}} onMouseLeave={() => {setIsFXListVisible(false)}}>
                 Select Effect
                 {isFXListVisible ? <FxList 
                     effectsList={effectsList}
