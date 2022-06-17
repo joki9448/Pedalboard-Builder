@@ -12,8 +12,9 @@ body {
 }
 .pb-button {
   display: flex;
-  justify-content: right;
   font-family: 'Share Tech', sans-serif;
+  margin-left: 90%;
+  width: 20%;
 }
 
 
@@ -154,21 +155,31 @@ body {
 
 .menu-container {
   display: flex;
+  position: fixed;
+  font-size: 30px;
+  width: 100%;
   flex-direction: row;
   justify-content: start;
 }
-.frames-dropdown {
+.brands-container {
+
+}
+.dropdown-list {
+}
+.frameslist-container {
+}
+/* .frames-dropdown {
   background-image: linear-gradient(#1095c1 0 0);
-  background-size: 100% .08em; /* .08em is our fixed height; modify as needed. */
-  background-position: /* ??? */;
+  background-size: 100% .08em; 
+  background-position: 25vh;
   background-repeat: no-repeat;
   transition: background-size .3s, background-position .3s .3s;
 }
 .frames-dropdown:hover {
   transition: background-size .3s .3s, background-position .3s;
   background-size: 100% 100%;
-  background-position: /* ??? */;
-}
+  background-position: 25vh;
+} */
 
 
 /* .nav-text-1:hover, .nav-text-2:hover {
