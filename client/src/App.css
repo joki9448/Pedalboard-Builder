@@ -1,21 +1,19 @@
 body {
+  background-image: url('/Users/jongkim/Development/code/phase-5/capstone/client/public/potential-wallpaper.jpeg');
   background-color: white;
+  font-family: 'Share Tech', sans-serif;
 }
 
-/* .pedalboard-container {
-  display: flex;
-  align-items: flex-end;
-  position: fixed;
-  overflow: auto;
+.button {
+  font-family: 'Share Tech', sans-serif;
 }
- */
-/* .frameslist-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
 
+.builder-header {
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}
 .menu-container{
+  color: white;
   display: flex;
   gap: 0 5%;
   align-items: center;
