@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useLocation
 } from 'react-router-dom';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend'
@@ -12,6 +13,9 @@ import Builder from './components/Builder';
 import Collection from './components/Collection';
 
 function App() {
+
+  // const path = useLocation().builder;
+  // const location = path.split("/")[1];
 
   return (
     <div className="App">

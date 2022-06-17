@@ -130,7 +130,7 @@ function Builder() {
         <div>
             {/* <h1>{pedals.all?.length}</h1> */}
             <Link to="/">
-                <button className="button">HOME</button>
+                <button className="home-button">HOME</button>
             </Link>
             <h1 className="builder-header">Build Your Board</h1>
             <div>
@@ -167,7 +167,7 @@ function Builder() {
 
             {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
-            <button className="button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
+            <button className="pb-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
 
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
