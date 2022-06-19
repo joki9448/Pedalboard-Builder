@@ -17,6 +17,7 @@ body {
 
 .home-container {
   background: black;
+  box-shadow: 60px -35px teal;
 }
 
 .builder-page{
@@ -183,8 +184,18 @@ body {
   justify-content: start;
   z-index: 1;
 }
+
+.dropdown-list {
+  background-image: linear-gradient(#EFEFEF,#EFEFEF);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s;
+  padding: 5px;
+}
 .dropdown-list:hover {
-  opacity: 0.6;
+  background-size: 100% 100%;  
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .frameslist-container {
   color: black;
