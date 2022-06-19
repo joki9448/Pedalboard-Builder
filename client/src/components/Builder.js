@@ -60,7 +60,6 @@ function Builder() {
     const [selectedEffect, setSelectedEffect] = useState('')
 
     // React DnD
-
     const [{isOver}, drop] = useDrop(() => ({
         accept: "image",
         drop: (item) => addImageToBoard(item),
@@ -85,7 +84,6 @@ function Builder() {
         // setDroppedPedals((board) => [...board, droppedPedal])
     }
 
-
     // const resetMenu = () => {
     //     setSelectedBrand('')
     //     setSelectedEffect('')
@@ -93,7 +91,6 @@ function Builder() {
     // } 
 
     // Callbacks
-
     const handleBoardVisibleClick = () => {
         setIsBoardContainerVisible(!isBoardContainerVisible)
     }
@@ -135,9 +132,6 @@ function Builder() {
             <h1 className="builder-header">Build Your Board</h1>
             <div>
                 <Menu 
-                    // pedals={pedals}
-                    // setPedals={setPedals}
-
                     framesList={framesList}
                     isFramesSelectVisible={isFramesSelectVisible}
                     setIsFramesSelectVisible={setIsFramesSelectVisible}

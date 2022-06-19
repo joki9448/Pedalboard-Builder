@@ -4,7 +4,6 @@ import PedalItem from './PedalItem';
 
 function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
     // console.log('from pedalboard: ', board)
-
     if(isFrameSelected === false) {
         return "Please select a pedalboard!"
     }
