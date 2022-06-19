@@ -21,7 +21,7 @@ function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
                     })
                 }
             </div>
-        <img className="pb-img" src={`/images/Frames/${selectedFrame}.jpeg`}/>
+            <img className="pb-img" src={`/images/Frames/${selectedFrame}.jpeg`}/>
         </div>
     )
 }

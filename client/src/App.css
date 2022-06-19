@@ -1,29 +1,28 @@
 body {
-  /* background-image: url('/Users/jongkim/Development/code/phase-5/capstone/client/public/potential-wallpaper.jpeg'); */
-  font-family: 'Share Tech', sans-serif;
+  background: black;
+  font-family: 'Play', sans-serif;
 }
 
 .browse-button {
-  font-family: 'Share Tech', sans-serif;
+  font-family: 'Play', sans-serif;
 }
 .home-button {
-  font-family: 'Share Tech', sans-serif;
+  font-family: 'Play', sans-serif;
 }
 .pb-button {
   display: flex;
-  font-family: 'Share Tech', sans-serif;
+  font-family: 'Play', sans-serif;
   margin-left: 90%;
   width: 20%;
 }
 
 
 .builder-header {
-  background: black;
-  color: white;
-  font-family: 'Share Tech', sans-serif;
+  color: black;
+  font-family: 'Play', sans-serif;
 }
 .menu-container{
-  color: white;
+  color: black;
   display: flex;
   gap: 0 3%;
   align-items: center;
@@ -67,7 +66,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5%;
-  margin-left: 3%;
+  margin-left: 1%;
   flex-direction: row-reverse;
 }
 .selectedpedals-container:hover {
@@ -79,11 +78,14 @@ body {
 }
 
 .home-container > h1 {
+  display: block;
   color: white;
+  font-size: 60px;
   text-align: left;
-  margin-left: 2%;
-  max-width: 20%;
-  z-index: 1;
+  margin-top: 5%;
+  margin-left: 8%;
+  height: 30px;
+  max-width: 40%;
   text-shadow: 0 0 3px skyblue, 0 0 5px teal;
 }
 .nav-img-container-1 {
@@ -95,7 +97,7 @@ body {
   overflow: hidden;
   max-height: 65vh;
   max-width: 88vw;
-  margin-top: 10%;
+  margin-top: 6%;
   margin-left: 2%;
   box-shadow: 1rem 1rem #FF87F8, -1rem -1rem purple;
 }
@@ -161,7 +163,7 @@ body {
 .menu-container {
   display: flex;
   position: absolute;
-  background: black;
+  color: black;
   font-size: 30px;
   width: 100%;
   flex-direction: row;
@@ -169,22 +171,22 @@ body {
   z-index: 1;
 }
 .dropdown-list:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .frameslist-container {
-  background: black;
+  color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
 }
 .brands-container {
-  background: black;
+  color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
 }
 .fx-container {
-  background: black;
+  color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
