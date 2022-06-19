@@ -124,7 +124,7 @@ function Builder() {
     }
 
     return (
-        <div>
+        <div className="builder-page">
             {/* <h1>{pedals.all?.length}</h1> */}
             <Link to="/">
                 <button className="home-button">HOME</button>
