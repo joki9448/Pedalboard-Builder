@@ -94,10 +94,10 @@ body {
   font-size: 60px;
   text-align: left;
   margin-top: 5%;
-  margin-left: 3%;
+  margin-left: 2%;
   height: 25px;
   max-width: 40%;
-  text-shadow: 0 0 3px skyblue, 0 0 5px teal;
+  text-shadow: 0 0 10px skyblue, 0 0 5px teal;
 }
 .nav-img-container-1 {
   display: flex;
