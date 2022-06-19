@@ -152,16 +152,14 @@ function Builder() {
                     setIsPedalContainerVisible={setIsPedalContainerVisible}
 
                     handleModelClick={handleModelClick}
+
+                    handleBoardVisibleClick={handleBoardVisibleClick}
                 />
             </div>
 
             {isPedalContainerVisible ? <PedalsContainer filteredPedals={pedals.filtered}
                 /> 
             : null}
-
-            {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
-
-            <button className="pb-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
 
             {isBoardContainerVisible ? <Pedalboard 
                 selectedFrame={selectedFrame} 
@@ -170,6 +168,10 @@ function Builder() {
                 pedals={pedals}
                 /> 
             : null}
+
+
+
+            {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
             {/* Drop area testing */}
             {/* <div className="board" onDrop={handleDragOver}>

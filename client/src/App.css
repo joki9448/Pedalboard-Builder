@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: white;
   font-family: 'Play', sans-serif;
 }
 
@@ -11,14 +11,20 @@ body {
 }
 .pb-button {
   display: flex;
+  margin-left: 30%;
   font-family: 'Play', sans-serif;
-  margin-left: 90%;
-  width: 20%;
+}
+
+.home-container {
+  background: black;
 }
 
 .builder-page{
-  background: white;
+  position: absolute;
+  /* background: white; */
   height: 150vh;
+  width: 100vw;
+  overflow: hidden;
 }
 .builder-header {
   color: black;
@@ -51,7 +57,7 @@ body {
 
 .pb-window {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   /* height: 50rem;
   width: 50rem; */
   height: 800px;
@@ -88,8 +94,8 @@ body {
   font-size: 60px;
   text-align: left;
   margin-top: 5%;
-  margin-left: 5%;
-  height: 30px;
+  margin-left: 3%;
+  height: 25px;
   max-width: 40%;
   text-shadow: 0 0 3px skyblue, 0 0 5px teal;
 }
@@ -102,7 +108,7 @@ body {
   overflow: hidden;
   max-height: 65vh;
   max-width: 88vw;
-  margin-top: 6%;
+  margin-top: 4%;
   margin-left: 2%;
   box-shadow: 1rem 1rem #FF87F8, -1rem -1rem purple;
 }
@@ -155,7 +161,7 @@ body {
 .nav-text-2 {
   position: absolute;
   margin-top: 60%;
-  margin-left: 5%;
+  margin-left: 3%;
   border: 2px solid white;
   color: white;
   padding: 1% 1%;

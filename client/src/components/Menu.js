@@ -17,6 +17,7 @@ function Menu({
                 setIsFXListVisible,
                 setSelectedEffect,
                 handleModelClick,
+                handleBoardVisibleClick
             }){
                 
     return (
@@ -48,6 +49,7 @@ function Menu({
                 : null}
             </div>
             <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
+            <button className="pb-button" onClick={handleBoardVisibleClick}>Hide/Show Board</button>
         </div>
     )
 }
