@@ -111,7 +111,7 @@ function Builder() {
             // console.log('dropped pedal objs', prevState.dropped)
             let droppedIds = []
             let stopDuplicates = prevState.dropped.filter((p) => {
-                droppedIds.push(p.id)
+                droppedIds.unshift(p.id)
                 return droppedIds
                 // console.log('foundPedal obj in stopduplicates', foundPedal.id)
             })
