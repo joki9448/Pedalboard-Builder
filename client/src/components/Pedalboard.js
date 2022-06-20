@@ -4,6 +4,8 @@ import DropZone from './DropZone';
 
 function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
     // console.log('from pedalboard: ', board)
+
+    // create a component that pops up as an alert
     if(isFrameSelected === false) {
         return "Please select a pedalboard!"
     }

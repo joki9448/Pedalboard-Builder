@@ -6,7 +6,7 @@ body {
 .browse-button {
   font-family: 'Play', sans-serif;
   position: relative;
-  background-color: #4CAF50;
+  background-color: grey;
   border: none;
   font-size: 20px;
   color: #FFFFFF;
@@ -73,7 +73,8 @@ body {
   display: flex;
   gap: 0 3%;
   align-items: center;
-  
+  cursor: pointer;
+
 }
 
 .pedals-container{
@@ -228,7 +229,7 @@ body {
   justify-content: start;
   margin-left: 2%;
   z-index: 1;
-  padding: 5px;
+  padding: 3px;
 }
 
 .dropdown-list {
@@ -250,7 +251,7 @@ body {
   font-size: 23px;
   text-align: center;
   opacity: 0.8;
-  margin-top: 0.5%;
+  margin-top: 0.1%;
 }
 .brands-container {
   background: white;
@@ -259,7 +260,7 @@ body {
   font-size: 23px;
   text-align: center;
   opacity: 0.8;
-  margin-top: 0.5%;
+  margin-top: 0.1%;
 }
 .fx-container {
   background: white;
@@ -268,7 +269,7 @@ body {
   font-size: 23px;
   text-align: center;
   opacity: 0.8;
-  margin-top: 0.5%;
+  margin-top: 0.1%;
 }
 
 @keyframes fadeOut {

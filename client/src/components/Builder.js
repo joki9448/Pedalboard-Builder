@@ -96,7 +96,7 @@ function Builder() {
     }
 
     const filterByBrandAndEffect = (p) => {
-      return (p.brand === selectedBrand || p.effect === selectedEffect)
+      return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
 
     const handleDragOver = (e) => {
@@ -170,23 +170,8 @@ function Builder() {
             : null}
 
 
-
             {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
-            {/* Drop area testing */}
-            {/* <div className="board" onDrop={handleDragOver}>
-                {console.log('dropped pedals array: ', droppedPedals)}
-                {
-                  pedals.dropped.map((p) => {
-                    return(
-                      <div key={p.id}>
-                        <p>{p.model} - {p.id}</p>
-                        <SelectedPedals p={p}/>
-                      </div>
-                    )
-                  })
-                }
-            </div> */}
         </div>
     )
 }
