@@ -36,6 +36,9 @@ body {
   transition: 0s;
 }
 .home-button {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 95%;
   font-family: 'Play', sans-serif;
 }
 .pb-button {
@@ -60,12 +63,12 @@ body {
   color: white;
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   background: linear-gradient(to right, black, white);
-  width: 40vw;
+  width: 30vw;
   padding: 10px;
   margin-left: 2%;
   font-family: 'Play', sans-serif;
 }
-.menu-container{
+.menu-container {
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   color: white;
   background: linear-gradient(to right, black, white);
@@ -245,31 +248,34 @@ body {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .frameslist-container {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   position: absolute;
   font-size: 23px;
-  text-align: center;
+  align-content: start;
   opacity: 0.8;
   margin-top: 0.1%;
+  padding-right: 25px;
 }
 .brands-container {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   position: absolute;
   font-size: 23px;
-  text-align: center;
+  align-content: start;
   opacity: 0.8;
   margin-top: 0.1%;
+  padding-right: 25px;
 }
 .fx-container {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   position: absolute;
   font-size: 23px;
-  text-align: center;
+  align-content: start;
   opacity: 0.8;
   margin-top: 0.1%;
+  padding-right: 25px;
 }
 
 @keyframes fadeOut {
