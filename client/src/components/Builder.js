@@ -12,7 +12,8 @@ function Builder() {
     // const [filteredPedals, setFilteredPedals] = useState([])
     // const [droppedPedals, setDroppedPedals] = useState([])
     const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
-
+    console.log('dropped pedals array: ', pedals.dropped)
+    const { id, brand, model, effect } = pedals.dropped
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
 
     const request = async () => {
@@ -70,19 +71,10 @@ function Builder() {
     }))
 
     const addImageToBoard = (droppedPedal) => {
-        console.log('id of the pedal being dragged: ', droppedPedal)
-        console.log('PEDALS', pedals)
-        // const droppedPedal = pedals.all.find((pedal) => {
-        //     console.log('filtered ped', pedal)
-        //     return id == pedal.id
-        // })
-        // setPedals(prevState => {
-        //     return {...prevState, ['dropped']: [...prevState.dropped, droppedPedal]}
-        // })
+        // console.log('id of the pedal being dragged: ', droppedPedal)
+        // console.log('PEDALS', pedals)
         setPedals({all: [...pedals.all], filtered: [...pedals.filtered], dropped: [...pedals.dropped, droppedPedal]})
         console.log('dropped pedals', pedals.dropped)
-        // console.log('dropped images array (inside addImageToBoard): ', droppedPedal[0])
-        // setDroppedPedals((board) => [...board, droppedPedal])
     }
 
     // const resetMenu = () => {
@@ -100,18 +92,11 @@ function Builder() {
       return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
 
-    // const handleBoardSubmit = async () => {
-    //     let form = new FormData({pedals})
-    //     let req = await fetch('/configs', {
-    //         method: "POST",
-    //         body: form
-    //     })
-    // }
     const handleBoardSubmit = async () => {
         let req = await fetch('/configs', {
             method: "POST",
-            headers: "application/json",
-            body: JSON.stringify({pedals})
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ id: id, brand: brand, model: model, effect: effect })
         })
         let res = req.json()
         console.log('post res: ', res)
