@@ -51,7 +51,7 @@ body {
 }
 .pb-button {
   display: flex;
-  margin-left: 30%;
+  margin-left: 1%;
   font-family: 'Play', sans-serif;
 }
 
@@ -240,7 +240,7 @@ body {
   color: white;
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   font-size: 30px;
-  width: 100%;
+  width: 95%;
   flex-direction: row;
   justify-content: start;
   margin-left: 2%;

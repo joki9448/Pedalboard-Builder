@@ -59,6 +59,7 @@ function Builder() {
     const [isFXListVisible, setIsFXListVisible] = useState(false)
     const [selectedEffect, setSelectedEffect] = useState('')
 
+
     // React DnD
     const [{isOver}, drop] = useDrop(() => ({
         accept: "image",
@@ -153,6 +154,8 @@ function Builder() {
                     handleModelClick={handleModelClick}
 
                     handleBoardVisibleClick={handleBoardVisibleClick}
+
+                    isBoardContainerVisible={isBoardContainerVisible}
                 />
             </div>
 
