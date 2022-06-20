@@ -28,18 +28,23 @@ body {
   overflow: hidden;
 }
 .builder-header {
-  color: black;
-  background: linear-gradient(to right, #EFEFEF, white);
-  width: 30vw;
+  color: white;
+  text-shadow: 0 0 10px skyblue, 0 0 5px teal;
+  background: linear-gradient(to right, black, white);
+  width: 40vw;
   padding: 10px;
   margin-left: 2%;
   font-family: 'Play', sans-serif;
 }
 .menu-container{
+  text-shadow: 0 0 10px skyblue, 0 0 5px teal;
+  color: white;
+  background: linear-gradient(to right, black, white);
   color: black;
   display: flex;
   gap: 0 3%;
   align-items: center;
+  
 }
 
 .pedals-container{
@@ -186,13 +191,15 @@ body {
 .menu-container {
   display: flex;
   position: absolute;
-  color: black;
+  color: white;
+  text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   font-size: 30px;
   width: 100%;
   flex-direction: row;
   justify-content: start;
   margin-left: 2%;
   z-index: 1;
+  padding: 3px;
 }
 
 .dropdown-list {
