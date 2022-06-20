@@ -19,7 +19,7 @@ function Builder() {
         try {
             let req = await fetch('/pedals')
             let res = await req.json()
-            console.log('res', res)
+            // console.log('res', res)
             setPedals(prevState => {
               return {...prevState, ['all']: res}
             })
@@ -100,6 +100,23 @@ function Builder() {
       return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
 
+    // const handleBoardSubmit = async () => {
+    //     let form = new FormData({pedals})
+    //     let req = await fetch('/configs', {
+    //         method: "POST",
+    //         body: form
+    //     })
+    // }
+    const handleBoardSubmit = async () => {
+        let req = await fetch('/configs', {
+            method: "POST",
+            headers: "application/json",
+            body: JSON.stringify({pedals})
+        })
+        let res = req.json()
+        console.log('post res: ', res)
+    }
+
     const handleDragOver = (e) => {
         e.preventDefault()
         let model = e.dataTransfer.getData("model")
@@ -129,6 +146,12 @@ function Builder() {
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
+            <button className="submit-button" onClick={(e) => {
+                e.preventDefault()
+                handleBoardSubmit()
+            }}>
+                Save Board
+            </button>
             <h1 className="builder-header">Build Your Board</h1>
             <div>
                 <Menu 
@@ -170,7 +193,6 @@ function Builder() {
                 pedals={pedals}
                 /> 
             : null}
-
 
             {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
