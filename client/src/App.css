@@ -29,6 +29,10 @@ body {
 }
 .builder-header {
   color: black;
+  background: linear-gradient(to right, #EFEFEF, white);
+  width: 30vw;
+  padding: 10px;
+  margin-left: 2%;
   font-family: 'Play', sans-serif;
 }
 .menu-container{
@@ -174,7 +178,7 @@ body {
 }
 
 .background-color {
-  background-color: red;
+  background-color: #C60000;
   height: 8vh;
   width: 100vw;
 }
@@ -187,6 +191,7 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: start;
+  margin-left: 2%;
   z-index: 1;
 }
 
@@ -195,7 +200,7 @@ body {
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: .4s;
-  padding: 5px;
+  padding: 2px;
 }
 .dropdown-list:hover {
   background-size: 100% 100%;  
@@ -203,22 +208,31 @@ body {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .frameslist-container {
+  background: white;
   color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
+  opacity: 0.8;
+  margin-top: 0.5%;
 }
 .brands-container {
+  background: white;
   color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
+  opacity: 0.8;
+  margin-top: 0.5%;
 }
 .fx-container {
+  background: white;
   color: black;
   position: absolute;
   font-size: 23px;
   text-align: center;
+  opacity: 0.8;
+  margin-top: 0.5%;
 }
 
 @keyframes fadeOut {
