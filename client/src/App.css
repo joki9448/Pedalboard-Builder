@@ -173,6 +173,11 @@ body {
   background-color: rgba(45, 51, 61, 0.8);
 }
 
+.background-color {
+  background-color: red;
+  height: 8vh;
+  width: 100vw;
+}
 
 .menu-container {
   display: flex;

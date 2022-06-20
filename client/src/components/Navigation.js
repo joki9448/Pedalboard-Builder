@@ -24,6 +24,8 @@ function Navigation() {
                         </div>
                     </Link>
             </nav>
+            <div className="background-color"></div>
+
         </div>
     )
 }
