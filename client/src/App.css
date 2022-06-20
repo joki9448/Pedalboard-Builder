@@ -37,9 +37,17 @@ body {
 }
 .home-button {
   position: absolute;
+  border: 1px solid teal;
+  background: white;
+  font-size: 25px;
   margin-top: 30px;
-  margin-left: 95%;
+  margin-left: 90%;
+  transition-duration: 0.4s;
   font-family: 'Play', sans-serif;
+}
+.home-button:hover {
+  background-color: teal;
+  color: white;
 }
 .pb-button {
   display: flex;
@@ -77,15 +85,20 @@ body {
   gap: 0 3%;
   align-items: center;
   cursor: pointer;
-
 }
 
 .pedals-container{
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow: scroll;
-  column-gap: 5px;
+  column-gap: 2px;
+  margin-top: 5%;
+  padding-bottom: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  /* border: 5px solid black; */
 }
 .pedals-item{
   display: flex;
@@ -239,13 +252,12 @@ body {
   background-image: linear-gradient(#EFEFEF,#EFEFEF);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: .4s;
+  /* transition: .4s; */
+  transition-duration: 0.4s;
   padding: 2px;
 }
 .dropdown-list:hover {
-  background-size: 100% 100%;  
-  opacity: 1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 .frameslist-container {
   background: black;
@@ -256,6 +268,11 @@ body {
   opacity: 0.8;
   margin-top: 0.1%;
   padding-right: 25px;
+}
+.frameslist-container:hover {
+  /* background-size: 100% 100%;  
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);  */
 }
 .brands-container {
   background: black;
@@ -278,32 +295,41 @@ body {
   padding-right: 25px;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* .frames-dropdown {
-  background-image: linear-gradient(#1095c1 0 0);
-  background-size: 100% .08em; 
-  background-position: 25vh;
+.brands-item {
+  background-image: linear-gradient(#1095c1,#1095c1);
+  background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size .3s, background-position .3s .3s;
+  transition: .4s;
 }
-.frames-dropdown:hover {
-  transition: background-size .3s .3s, background-position .3s;
-  background-size: 100% 100%;
-  background-position: 25vh;
-} */
+.brands-item:hover {
+  background-size: 100% 100%;  
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
 
+.fx-item {
+  background-image: linear-gradient(#1095c1,#1095c1);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s;
+}
+.fx-item:hover {
+  background-size: 100% 100%;  
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
 
-/* .nav-text-1:hover, .nav-text-2:hover {
-
-} */
+.frameslist-item {
+  background-image: linear-gradient(#1095c1,#1095c1);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s;
+}
+.frameslist-item:hover {
+  background-size: 100% 100%;  
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
 
 /* .whitescreen {
   position: absolute;
