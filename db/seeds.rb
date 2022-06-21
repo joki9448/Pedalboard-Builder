@@ -156,4 +156,23 @@ Pedal.create(brand: "Walrus Audio", model: "R1", effect: "Reverb / Delay", confi
 Pedal.create(brand: "Walrus Audio", model: "Slo", effect: "Reverb / Delay", config_id: c1.id)
 Pedal.create(brand: "Walrus Audio", model: "Slotva", effect: "Reverb / Delay", config_id: c1.id)
 
+Pedal.create(brand: "Wampler", model: "Ego", effect: "Compression / EQ", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Equator", effect: "Compression / EQ", config_id: c1.id)
+
+Pedal.create(brand: "Wampler", model: "DBPlus", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Dracarys", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Euphoria", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Gearbox", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Paisley", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Pantheon", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "PlexiDrive", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Ratsbane", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Tumnus", effect: "Distortion / Gain", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Velvet", effect: "Distortion / Gain", config_id: c1.id)
+
+Pedal.create(brand: "Wampler", model: "Faux", effect: "Reverb / Delay", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Spring Reverb", effect: "Reverb / Delay", config_id: c1.id)
+Pedal.create(brand: "Wampler", model: "Terraform", effect: "Reverb / Delay", config_id: c1.id)
+
+
 puts 'Seeding done...'

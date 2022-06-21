@@ -12,6 +12,6 @@ class ConfigsController < ApplicationController
     private
 
     def config_params
-        params.permit(:brand, :model, :effect, :user_id)
+        params.permit(:brand, :model, :effect)
     end
 end

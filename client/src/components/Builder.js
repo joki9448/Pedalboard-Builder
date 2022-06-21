@@ -49,7 +49,7 @@ function Builder() {
     const [isFrameSelected, setIsFrameSelected] = useState(false)
     const [selectedFrame, setSelectedFrame] = useState('')
 
-    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Way Huge', 'Seymour Duncan', 'Darkglass']
+    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Wampler', 'Seymour Duncan', 'Darkglass']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
     const [selectedBrand, setSelectedBrand] = useState('')
 
