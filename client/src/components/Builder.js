@@ -16,7 +16,7 @@ function Builder() {
 
     const request = async () => {
         try {
-            let req = await fetch('http://localhost:4000/pedals')
+            let req = await fetch('/pedals')
             let res = await req.json()
             // console.log('res', res)
             setPedals(prevState => {
@@ -94,7 +94,7 @@ function Builder() {
 
     const handleBoardSubmit = async () => {
         try {
-            let req = await fetch(`http://localhost:3000/configs`, {
+            let req = await fetch(`/configs`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
