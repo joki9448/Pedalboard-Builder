@@ -10,7 +10,7 @@ function Builder() {
 
     const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
-    console.log('dropped', pedals.dropped)
+    // console.log('dropped', pedals.dropped)
 
     const request = async () => {
         try {
@@ -72,12 +72,6 @@ function Builder() {
         console.log('dropped pedals', pedals.dropped)
     }
 
-    // const resetMenu = () => {
-    //     setSelectedBrand('')
-    //     setSelectedEffect('')
-    //     setPedals({all: [], filtered: [], dropped: []})
-    // } 
-
     // Callbacks
     const handleBoardVisibleClick = () => {
         setIsBoardContainerVisible(!isBoardContainerVisible)
@@ -133,6 +127,11 @@ function Builder() {
                 Save Board
             </button> */}
             <h1 className="builder-header">Build Your Board</h1>
+            <div className="signal-container">
+                {pedals.dropped.map((p, i) => {
+                    return <SignalPath key={i} path={p}/>
+                })}
+            </div>
             <div>
                 <Menu 
                     framesList={framesList}
@@ -173,10 +172,6 @@ function Builder() {
                 pedals={pedals}
                 /> 
             : null}
-
-            <div><SignalPath path={pedals.dropped}/></div>
-
-            {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 
         </div>
     )
