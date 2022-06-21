@@ -115,7 +115,6 @@ body {
 }
 
 .signal-container {
-  border: 5px solid pink;
 }
 .signal-text {
   display: flex;

@@ -14,6 +14,7 @@ function Builder() {
     // console.log('dropped', pedals.dropped)
     // const { brand, model, effect } = pedals.dropped
     let signalChain = pedals.dropped
+    console.log('signalChain: ', signalChain)
 
     const request = async () => {
         try {

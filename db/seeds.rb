@@ -5,7 +5,7 @@ puts 'Creating seeds...'
 puts 'Creating users...'
 u1 = User.create(username: "John", password_digest: "123")
 puts 'Creating configs...'
-c1 = Config.create(user_id: u1.id)
+c1 = Config.create!(user_id: u1.id, signal_chain: [])
 
 # TC Electronic #
 
@@ -126,7 +126,6 @@ Pedal.create(brand: "Boss", model: "Metal Zone MT-2", effect: "Distortion / Gain
 Pedal.create(brand: "Boss", model: "Overdrive OD-3", effect: "Distortion / Gain", config_id: c1.id)
 Pedal.create(brand: "Boss", model: "Super Overdrive SD-1", effect: "Distortion / Gain", config_id: c1.id)
 Pedal.create(brand: "Boss", model: "Fuzz FZ-1w", effect: "Distortion / Gain", config_id: c1.id)
-
 
 # Walrus #
 
