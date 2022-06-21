@@ -5,7 +5,7 @@ puts 'Creating seeds...'
 puts 'Creating users...'
 u1 = User.create(username: "John", password_digest: "123")
 puts 'Creating configs...'
-c1 = Config.create!(user_id: u1.id, signal_chain: [])
+c1 = Config.create!(user_id: u1.id)
 
 # TC Electronic #
 

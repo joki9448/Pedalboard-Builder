@@ -49,8 +49,6 @@ function Menu({
                 /> 
                 : null}
             </div>
-                <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
-                <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>  
             </div>
     )
 }

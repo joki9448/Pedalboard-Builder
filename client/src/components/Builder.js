@@ -146,6 +146,9 @@ function Builder() {
                 Save Board
             </button>
             <h1 className="builder-header">Build Your Board</h1>
+            <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
+            <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>  
+
             <div className="signal-container">
                 {pedals.dropped.map((p, i) => {
                     return <SignalPath key={i} path={p} />
