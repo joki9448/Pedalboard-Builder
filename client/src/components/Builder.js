@@ -4,6 +4,7 @@ import { useDrop } from 'react-dnd';
 import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
 import Pedalboard from './Pedalboard';
+import SignalPath from './SignalPath';
 
 function Builder() {
 
@@ -172,6 +173,8 @@ function Builder() {
                 pedals={pedals}
                 /> 
             : null}
+
+            <div><SignalPath path={pedals.dropped}/></div>
 
             {/* <button onClick={() => {resetMenu()}}>Reset Search</button> */}
 

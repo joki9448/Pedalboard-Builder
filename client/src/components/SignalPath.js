@@ -1,8 +1,7 @@
-function SignalPath({ p }) {
-    console.log('p from signalpath: ', p)
+function SignalPath({ path }) {
+    console.log('path: ', path)
     return (
         <div>
-            {p.brand}
         </div>
     )
 }
