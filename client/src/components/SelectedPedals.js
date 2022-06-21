@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import SignalPath from './SignalPath';
 
 function SelectedPedals({ p }){
     const { id, brand, model, effect } = p
@@ -18,6 +19,9 @@ function SelectedPedals({ p }){
                 draggable="true"
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
+            <div className="path-container">
+                <SignalPath p={p}/>
+            </div>
         </div>
     )
 }

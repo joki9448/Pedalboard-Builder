@@ -18,7 +18,7 @@ function Menu({
                 setSelectedEffect,
                 handleModelClick,
                 handleBoardVisibleClick,
-                isBoardContainerVisible
+                isBoardContainerVisible,
             }){
                 
     return (
@@ -49,9 +49,9 @@ function Menu({
                 /> 
                 : null}
             </div>
-            <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
-            <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>
-        </div>
+                <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
+                <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>  
+            </div>
     )
 }
 

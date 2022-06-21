@@ -25,7 +25,7 @@ function Navigation() {
                     </Link>
             </nav>
             <div className="background-color"></div>
-
+            <div className="background-layer"></div>
         </div>
     )
 }

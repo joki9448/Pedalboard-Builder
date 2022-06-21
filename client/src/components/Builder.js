@@ -4,17 +4,12 @@ import { useDrop } from 'react-dnd';
 import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
 import Pedalboard from './Pedalboard';
-// import PedalItem from './PedalItem';
 
 function Builder() {
 
-    // const [pedals, setPedals] = useState([])
-    // const [filteredPedals, setFilteredPedals] = useState([])
-    // const [droppedPedals, setDroppedPedals] = useState([])
     const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
-    console.log('dropped pedals array: ', pedals.dropped)
-    const { id, brand, model, effect } = pedals.dropped
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
+    console.log('dropped', pedals.dropped)
 
     const request = async () => {
         try {
@@ -60,7 +55,6 @@ function Builder() {
     const [isFXListVisible, setIsFXListVisible] = useState(false)
     const [selectedEffect, setSelectedEffect] = useState('')
 
-
     // React DnD
     const [{isOver}, drop] = useDrop(() => ({
         accept: "image",
@@ -92,15 +86,15 @@ function Builder() {
       return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
 
-    const handleBoardSubmit = async () => {
-        let req = await fetch('/configs', {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ id: id, brand: brand, model: model, effect: effect })
-        })
-        let res = req.json()
-        console.log('post res: ', res)
-    }
+    // const handleBoardSubmit = async () => {
+    //     let req = await fetch('/configs', {
+    //         method: "POST",
+    //         headers: {"Content-Type": "application/json"},
+    //         body: JSON.stringify({ id: id, brand: brand, model: model, effect: effect })
+    //     })
+    //     let res = await req.json()
+    //     console.log('post res: ', res)
+    // }
 
     const handleDragOver = (e) => {
         e.preventDefault()
@@ -131,12 +125,12 @@ function Builder() {
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
-            <button className="submit-button" onClick={(e) => {
+            {/* <button className="submit-button" onClick={(e) => {
                 e.preventDefault()
                 handleBoardSubmit()
             }}>
                 Save Board
-            </button>
+            </button> */}
             <h1 className="builder-header">Build Your Board</h1>
             <div>
                 <Menu 

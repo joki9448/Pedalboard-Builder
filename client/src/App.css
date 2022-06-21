@@ -35,6 +35,18 @@ body {
   opacity: 1;
   transition: 0s;
 }
+
+/* .background-layer {
+  background: white;
+  border: 5px solid pink;
+  margin-left: 50%;
+} */
+.background-color {
+  background-color: #C60000;
+  height: 8vh;
+  width: 100vw;
+}
+
 .home-button {
   position: absolute;
   border: 1px solid teal;
@@ -245,11 +257,7 @@ body {
   background-color: rgba(45, 51, 61, 0.8);
 }
 
-.background-color {
-  background-color: #C60000;
-  height: 8vh;
-  width: 100vw;
-}
+
 
 .menu-container {
   display: flex;
@@ -346,6 +354,10 @@ body {
   background-size: 100% 100%;  
   opacity: 1;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.path-container {
+  height: 100vh;
 }
 
 /* .whitescreen {
