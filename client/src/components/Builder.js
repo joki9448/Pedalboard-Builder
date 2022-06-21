@@ -9,12 +9,14 @@ import SignalPath from './SignalPath';
 function Builder() {
 
     const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
+    const [config, setConfig] = useState([])
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
     // console.log('dropped', pedals.dropped)
+    const { brand, model, effect } = pedals.dropped
 
     const request = async () => {
         try {
-            let req = await fetch('/pedals')
+            let req = await fetch('http://localhost:4000/pedals')
             let res = await req.json()
             // console.log('res', res)
             setPedals(prevState => {
@@ -24,7 +26,6 @@ function Builder() {
             alert(error.message)
         }
     }
-
     useEffect(() => {
         request()
     }, [])
@@ -82,14 +83,31 @@ function Builder() {
     }
 
     // const handleBoardSubmit = async () => {
-    //     let req = await fetch('/configs', {
+    //     let req = await fetch('http://localhost:3000/configs', {
     //         method: "POST",
     //         headers: {"Content-Type": "application/json"},
-    //         body: JSON.stringify({ id: id, brand: brand, model: model, effect: effect })
+    //         body: JSON.stringify({ brand: brand, model: model, effect: effect })
     //     })
     //     let res = await req.json()
     //     console.log('post res: ', res)
     // }
+
+    const handleBoardSubmit = async () => {
+        try {
+            let req = await fetch(`http://localhost:3000/configs`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ brand: brand, model: model, effect: effect
+                })
+            })
+            let res = await req.json()
+            console.log('post res:', res)
+        }   catch (error) {
+            alert(error.message)
+        }
+    }
 
     const handleDragOver = (e) => {
         e.preventDefault()
@@ -120,16 +138,16 @@ function Builder() {
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
-            {/* <button className="submit-button" onClick={(e) => {
+            <button className="submit-button" onClick={(e) => {
                 e.preventDefault()
                 handleBoardSubmit()
             }}>
                 Save Board
-            </button> */}
+            </button>
             <h1 className="builder-header">Build Your Board</h1>
             <div className="signal-container">
                 {pedals.dropped.map((p, i) => {
-                    return <SignalPath key={i} path={p}/>
+                    return <SignalPath key={i} path={p} />
                 })}
             </div>
             <div>

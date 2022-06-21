@@ -114,11 +114,13 @@ body {
   cursor: pointer;
 }
 
+.signal-container {
+  border: 5px solid pink;
+}
 .signal-text {
   display: flex;
   font-family: 'Play', sans-serif;
-  font-size: 100px;
-  border: 5px solid pink;
+  font-size: 10px;
 }
 
 .pedals-container{
