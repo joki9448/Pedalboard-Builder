@@ -12,6 +12,10 @@ class ConfigsController < ApplicationController
     private
 
     def config_params
-        params.permit(:brand, :model, :effect)
+        params.permit(:signal_chain => 
+        [{"brand" => "",
+         "model" => "",
+         "effect" => ""
+        }])
     end
 end

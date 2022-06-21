@@ -12,7 +12,8 @@ function Builder() {
     const [config, setConfig] = useState([])
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
     // console.log('dropped', pedals.dropped)
-    const { brand, model, effect } = pedals.dropped
+    // const { brand, model, effect } = pedals.dropped
+    let signalChain = pedals.dropped
 
     const request = async () => {
         try {
@@ -99,8 +100,7 @@ function Builder() {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ brand: brand, model: model, effect: effect
-                })
+                body: JSON.stringify({ signalChain })
             })
             let res = await req.json()
             console.log('post res:', res)
