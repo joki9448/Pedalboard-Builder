@@ -6,14 +6,13 @@ body {
 .browse-button {
   /* font-family: 'Play', sans-serif; */
   position: absolute;
-  margin-left: 49.5%;
+  margin-left: 51%;
   background-color: white;
   border: none;
   font-size: 40px;
   color: #005775;
   padding: 8px;
   width: 50px;
-  text-align: center;
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
@@ -68,7 +67,7 @@ body {
   color: white;
   position: absolute;
   margin-top: 0.5%;
-  margin-left: 75%;
+  margin-left: 76%;
   background-color: rgba(45, 51, 61, 0.8);
   border: none;
   font-size: 25px;
@@ -310,11 +309,6 @@ body {
   opacity: 0.8;
   margin-top: 0.1%;
   padding-right: 25px;
-}
-.frameslist-container:hover {
-  /* background-size: 100% 100%;  
-  opacity: 1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);  */
 }
 .brands-container {
   background: black;
