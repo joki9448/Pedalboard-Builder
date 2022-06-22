@@ -4,16 +4,16 @@ body {
 }
 
 .browse-button {
-  font-family: 'Play', sans-serif;
+  /* font-family: 'Play', sans-serif; */
   position: absolute;
   margin-left: 50%;
-  margin-top: 3%;
-  /* background-color: grey; */
+  margin-top: 2.5%;
+  background-color: white;
   border: none;
-  font-size: 20px;
-  color: black;
+  font-size: 40px;
+  color: #005775;
   padding: 8px;
-  width: 150px;
+  width: 50px;
   text-align: center;
   transition-duration: 0.4s;
   text-decoration: none;
@@ -23,14 +23,14 @@ body {
 }
 .browse-button:after {
   content: "";
-  background: #f1f1f1;
+  background: white;
   display: block;
   position: absolute;
   padding-top: 300%;
   padding-left: 350%;
   margin-top: -120%;
   opacity: 0;
-  transition: all 0.8s;
+  transition: all 1s;
 }
 .browse-button:active:after {
   padding: 0;
@@ -45,9 +45,13 @@ body {
   margin-left: 50%;
 } */
 .background-color {
-  background-color: #C60000;
-  height: 8vh;
-  width: 100vw;
+  display: flex;
+  position: absolute;
+  background-color: #B90000;
+  height: 5vh;
+  width: 95%;
+  z-index: -2;
+  /* box-shadow: 5px 5px 5px grey; */
 }
 
 .home-button {

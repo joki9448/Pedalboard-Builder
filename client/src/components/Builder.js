@@ -5,6 +5,7 @@ import Menu from './Menu';
 import PedalsContainer from './PedalsContainer';
 import Pedalboard from './Pedalboard';
 import SignalPath from './SignalPath';
+import { AiFillPlayCircle } from 'react-icons/ai'
 
 function Builder() {
 
@@ -146,7 +147,11 @@ function Builder() {
                 Save Board
             </button>
             <h1 className="builder-header">Build Your Board</h1>
-            <button className="browse-button"onClick={() => {handleModelClick()}}>Browse Pedals</button>
+            <button className="browse-button"onClick={() => {handleModelClick()}}>
+                <div>
+                <AiFillPlayCircle />
+                </div>
+            </button>
             <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>  
 
             <div className="signal-container">
@@ -194,7 +199,6 @@ function Builder() {
                 pedals={pedals}
                 /> 
             : null}
-
         </div>
     )
 }
