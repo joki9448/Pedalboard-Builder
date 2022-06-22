@@ -86,23 +86,35 @@ function Builder() {
     }
 
     const handleRemovePedal = () => {
-        return signalChain.pop()
     }
 
+    // const handleBoardSubmit = async () => {
+    //     try {
+    //         let req = await fetch(`/configs`, {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({ signalChain })
+    //         })
+    //         let res = await req.json()
+    //         console.log('post res:', res)
+    //     }   catch (error) {
+    //         alert(error.message)
+    //     }
+    // }
     const handleBoardSubmit = async () => {
-        try {
-            let req = await fetch(`/configs`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ signalChain })
-            })
-            let res = await req.json()
-            console.log('post res:', res)
-        }   catch (error) {
-            alert(error.message)
-        }
+        let req = await fetch('http://localhost:3000/configs', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST"
+            },
+            body: JSON.stringify({ signalChain })
+        })
+        let res = req.json()
+        console.log('post res', res)
     }
 
     const handleDragOver = (e) => {

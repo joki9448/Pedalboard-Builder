@@ -5,7 +5,7 @@ class ConfigsController < ApplicationController
     end
 
     def create 
-        config = Config.create(config_params)
+        config = Config.create!(config_params)
         
         render json: config, status: 201
     end
