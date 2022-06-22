@@ -4,7 +4,6 @@ body {
 }
 
 .browse-button {
-  /* font-family: 'Play', sans-serif; */
   position: absolute;
   margin-left: 51%;
   background-color: white;
@@ -54,7 +53,7 @@ body {
   background-color: rgba(45, 51, 61, 0.8);
   font-size: 25px;
   margin-top: 30px;
-  margin-left: 90%;
+  margin-left: 90.5%;
   transition-duration: 0.4s;
   font-family: 'Play', sans-serif;
 }
@@ -152,8 +151,8 @@ body {
   column-gap: 2px;
   margin-top: 8%;
   padding-bottom: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+  /* margin-left: 2%;
+  margin-right: 2%; */
   /* border: 5px solid black; */
 }
 .pedals-item{
