@@ -86,7 +86,7 @@ function Builder() {
     }
 
     const handleRemovePedal = () => {
-        alert('deleted')
+        return signalChain.pop()
     }
 
     const handleBoardSubmit = async () => {

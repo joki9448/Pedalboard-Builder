@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function SelectedPedals({ p }){
+function SelectedPedals({ p, handleRemovePedal }){
     const { id, brand, model, effect } = p
     const [isDragging, setIsDragging] = useState(false)
     const handleDrag = (e) => {
@@ -12,7 +12,7 @@ function SelectedPedals({ p }){
 
     return (
         <div>
-            <button>X</button>
+            <button onClick={handleRemovePedal}>X</button>
             <img
                 className="selectedpedal"
                 onDragStart={handleDrag} 

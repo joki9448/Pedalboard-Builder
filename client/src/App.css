@@ -28,7 +28,7 @@ body {
   padding-left: 350%;
   margin-top: -120%;
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 .browse-button:active:after {
   padding: 0;
@@ -121,7 +121,7 @@ body {
   color: white;
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   background: linear-gradient(to right, black, grey, white);
-  width: 17vw;
+  width: 19vw;
   padding: 10px;
   margin-left: 2%;
   font-family: 'Play', sans-serif;
@@ -291,8 +291,6 @@ body {
   background-color: rgba(45, 51, 61, 0.8);
 }
 
-
-
 .menu-container {
   display: flex;
   position: absolute;
@@ -327,6 +325,7 @@ body {
   opacity: 0.8;
   margin-top: 0.1%;
   padding-right: 25px;
+  box-shadow: 3px 3px 3px 1px black; 
 }
 .brands-container {
   background: black;
@@ -337,6 +336,7 @@ body {
   opacity: 0.8;
   margin-top: 0.1%;
   padding-right: 25px;
+  box-shadow: 3px 3px 3px 1px black; 
 }
 .fx-container {
   background: black;
@@ -347,30 +347,31 @@ body {
   opacity: 0.8;
   margin-top: 0.1%;
   padding-right: 25px;
+  box-shadow: 3px 3px 3px 1px black; 
 }
 
 .brands-item {
   background-image: linear-gradient(#1095c1,#1095c1);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: .3s;
+  transition: .2s;
 }
 .brands-item:hover {
   background-size: 100% 100%;  
   opacity: 1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 3px 0px 0px white; 
 }
 
 .fx-item {
   background-image: linear-gradient(#1095c1,#1095c1);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: .3s;
+  transition: .2s;
 }
 .fx-item:hover {
   background-size: 100% 100%;  
   opacity: 1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 3px 0px 0px white; 
 }
 
 .frameslist-item {
@@ -382,7 +383,7 @@ body {
 .frameslist-item:hover {
   background-size: 100% 100%;  
   opacity: 1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 3px 0px 0px white; 
 }
 
 /* .path-container {

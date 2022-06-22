@@ -6,12 +6,13 @@ class ConfigsController < ApplicationController
 
     def create 
         config = Config.create(config_params)
+        
         render json: config, status: 201
     end
 
     private
 
     def config_params
-        params.permit(:signal_chain)
+        params.permit(:user_id, :signal_chain)
     end
 end
