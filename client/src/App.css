@@ -9,7 +9,7 @@ body {
   background-color: white;
   border: none;
   font-size: 45px;
-  color: #005775;
+  color: purple;
   width: 50px;
   transition-duration: 0.4s;
   text-decoration: none;
@@ -118,13 +118,27 @@ body {
 }
 .builder-header {
   color: white;
-  text-shadow: 0 0 10px skyblue, 0 0 5px teal;
+  text-shadow: 0 0 10px #FF87F8, 0 0 5px teal;
   background: linear-gradient(to right, black, grey, white);
   width: 19vw;
   padding: 10px;
   margin-left: 2%;
   font-family: 'Play', sans-serif;
 }
+.builder-head-layer {
+  position: absolute;
+  color: #FF87F8;
+  background: linear-gradient(to right, #FF87F8, white);
+  width: 18vw;
+  padding: 10px;
+  margin-left: 1.5%;
+  margin-top: 2%;
+  height: 35px;
+  z-index: -2;
+  opacity: 0.8;
+}
+
+
 .menu-container {
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
   color: white;
@@ -136,6 +150,19 @@ body {
   z-index: 1;
   cursor: pointer;
 }
+.builder-nav-layer {
+  position: absolute;
+  color: purple;
+  background: linear-gradient(to right, purple, white);
+  width: 42vw;
+  padding: 10px;
+  margin-left: 1.5%;
+  margin-top: 0.50%;
+  height: 25px;
+  z-index: -2;
+  opacity: 0.8;
+}
+
 
 .signal-container {
 }

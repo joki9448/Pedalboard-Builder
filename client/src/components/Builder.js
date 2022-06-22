@@ -103,17 +103,6 @@ function Builder() {
             alert(error.message)
         }
     }
-    // const handleBoardSubmit = async () => {
-    //     let req = await fetch('/configs', {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ signalChain })
-    //     })
-    //     let res = req.json()
-    //     console.log('post res', res)
-    // }
 
     const handleDragOver = (e) => {
         e.preventDefault()
@@ -144,13 +133,17 @@ function Builder() {
             <Link to="/">
                 <button className="home-button">HOME</button>
             </Link>
+            <div className="builder-head-layer"></div>
             <button className="submit-button" onClick={(e) => {
                 e.preventDefault()
                 handleBoardSubmit()
             }}>
                 Save Board
             </button>
+
             <h1 className="builder-header">Build Your Board</h1>
+            <div className="builder-nav-layer"></div>
+
             <button className="browse-button"onClick={() => {handleModelClick()}}>
                 <div>
                 <AiFillPlayCircle />
