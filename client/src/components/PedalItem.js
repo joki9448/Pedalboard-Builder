@@ -1,6 +1,4 @@
-// import { useDrag } from 'react-dnd';
 import {useState} from 'react'
-
 
 function PedalItem({ pedals }) {
     const { id, brand, effect, model } = pedals
@@ -20,7 +18,7 @@ function PedalItem({ pedals }) {
     return (
         <div className="pedals-item" onDragStart={handleDrag} draggable="true">
             <img
-                style={{opacity: isDragging ? "0.2" : "1"}} 
+                style={{opacity: isDragging ? "0" : "1"}} 
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
         </div>

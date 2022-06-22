@@ -146,7 +146,9 @@ function Builder() {
                 <AiFillPlayCircle />
                 </div>
             </button>
-            <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Frame" : "Show Frame"}</button>  
+            <button className="pb-button" onClick={handleBoardVisibleClick}>
+                {isBoardContainerVisible ? "Hide Frame" : "Show Frame"}
+            </button>  
 
             {/* <div className="signal-container">
                 {pedals.dropped.map((p, i) => {
@@ -182,7 +184,8 @@ function Builder() {
                 />
             </div>
 
-            {isPedalContainerVisible ? <PedalsContainer filteredPedals={pedals.filtered}
+            {isPedalContainerVisible ? <PedalsContainer 
+                filteredPedals={pedals.filtered}
                 /> 
             : null}
 

@@ -12,7 +12,9 @@ function PedalsContainer({ filteredPedals }) {
                 filteredPedals.map((p, i) => {
                     return(
                         <div key={i}>
-                            <PedalItem pedals={p}/>
+                            <PedalItem 
+                                pedals={p}
+                            />
                         </div>
                     )
                 })
