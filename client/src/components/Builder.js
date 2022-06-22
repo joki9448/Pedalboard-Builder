@@ -97,8 +97,8 @@ function Builder() {
                 },
                 body: JSON.stringify({ chain: signalChain })
             })
-            let res = await req.json()
-            console.log('post res:', res)
+            // let res = await req.json()
+            // console.log('post res:', res)
         }   catch (error) {
             alert(error.message)
         }
