@@ -2,7 +2,7 @@ import SelectedPedals from './SelectedPedals';
 import PedalItem from './PedalItem';
 import DropZone from './DropZone';
 
-function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
+function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals, handleRemovePedal }) {
     // console.log('from pedalboard: ', board)
 
     // create a component that pops up as an alert
@@ -17,7 +17,7 @@ function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals }) {
                         return(
                             <div key={p.id}>
                                 {/* <p>{p.model} - {p.id}</p> */}
-                                <SelectedPedals p={p}/>
+                                <SelectedPedals p={p} handleRemovePedal={handleRemovePedal}/>
                            </div>
                         )
                     })

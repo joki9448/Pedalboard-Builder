@@ -12,6 +12,7 @@ function SelectedPedals({ p }){
 
     return (
         <div>
+            <button>X</button>
             <img
                 className="selectedpedal"
                 onDragStart={handleDrag} 

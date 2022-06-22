@@ -85,15 +85,9 @@ function Builder() {
       return (p.brand === selectedBrand && p.effect === selectedEffect)
     }
 
-    // const handleBoardSubmit = async () => {
-    //     let req = await fetch('http://localhost:3000/configs', {
-    //         method: "POST",
-    //         headers: {"Content-Type": "application/json"},
-    //         body: JSON.stringify({ brand: brand, model: model, effect: effect })
-    //     })
-    //     let res = await req.json()
-    //     console.log('post res: ', res)
-    // }
+    const handleRemovePedal = () => {
+        alert('deleted')
+    }
 
     const handleBoardSubmit = async () => {
         try {
@@ -152,13 +146,13 @@ function Builder() {
                 <AiFillPlayCircle />
                 </div>
             </button>
-            <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Board" : "Show Board"}</button>  
+            <button className="pb-button" onClick={handleBoardVisibleClick}>{isBoardContainerVisible ? "Hide Frame" : "Show Frame"}</button>  
 
-            <div className="signal-container">
+            {/* <div className="signal-container">
                 {pedals.dropped.map((p, i) => {
                     return <SignalPath key={i} path={p} />
                 })}
-            </div>
+            </div> */}
             <div>
                 <Menu 
                     framesList={framesList}
@@ -197,6 +191,7 @@ function Builder() {
                 isFrameSelected={isFrameSelected}
                 onDrop={handleDragOver}
                 pedals={pedals}
+                handleRemovePedal={handleRemovePedal}
                 /> 
             : null}
         </div>

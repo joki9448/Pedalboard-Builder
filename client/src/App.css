@@ -185,12 +185,13 @@ body {
 
 .selectedpedals-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   /* margin-top: 25%;
   margin-left: 80%; */
   margin-top: 5%;
   margin-left: 3%;
-  flex-direction: row-reverse;
+  overflow: hidden;
+  /* flex-direction: row-reverse; */
 }
 .selectedpedals-container:hover {
   /* border: 5px solid pink; */

@@ -25,7 +25,7 @@ function Menu({
         <div className="menu-container">
             {/* <h1 className="menu-header">Menu</h1> */}
             <div className="dropdown-list" onMouseEnter={() => {setIsFramesSelectVisible(true)}} onMouseLeave={() => {setIsFramesSelectVisible(false)}}>
-                Select Board
+                Select Frame
                 {isFramesSelectVisible ? <FramesList 
                     framesList={framesList}
                     setSelectedFrame={setSelectedFrame}
