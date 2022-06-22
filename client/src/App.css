@@ -5,17 +5,16 @@ body {
 
 .browse-button {
   position: absolute;
-  margin-left: 51%;
+  margin-left: 48%;
   background-color: white;
   border: none;
-  font-size: 40px;
+  font-size: 45px;
   color: #005775;
-  padding: 8px;
   width: 50px;
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
-  opacity: 0.8;
+  opacity: 0.75;
   z-index: 2;
   cursor: pointer;
 }
@@ -28,7 +27,7 @@ body {
   padding-left: 350%;
   margin-top: -120%;
   opacity: 0;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 .browse-button:active:after {
   padding: 0;
@@ -296,7 +295,7 @@ body {
   position: absolute;
   color: white;
   text-shadow: 0 0 10px skyblue, 0 0 5px teal;
-  font-size: 30px;
+  font-size: 25px;
   width: 90%;
   flex-direction: row;
   justify-content: start;

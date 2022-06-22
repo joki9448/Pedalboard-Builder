@@ -5,7 +5,7 @@ class ConfigsController < ApplicationController
     end
 
     def create 
-        config = Config.create!()    
+        config = Config.create!(chain: params[:chain])    
         config.chain['links'] << params[:brand, :model, :effect]
         render json: config, status: 201
     end
