@@ -131,7 +131,7 @@ function Builder() {
         <div className="builder-page">
             {/* <h1>{pedals.all?.length}</h1> */}
             <Link to="/">
-                <button className="home-button">HOME</button>
+                <button className="home-button">Home</button>
             </Link>
             <div className="builder-head-layer"></div>
             <button className="submit-button" onClick={(e) => {
