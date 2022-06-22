@@ -15,10 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_133545) do
   enable_extension "plpgsql"
 
   create_table "configs", force: :cascade do |t|
-    t.integer "user_id"
-    t.text "signal_chain", array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.jsonb "chain", default: {"links"=>[]}
   end
 
   create_table "pedals", force: :cascade do |t|
@@ -26,13 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_133545) do
     t.string "model"
     t.string "effect"
     t.integer "config_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

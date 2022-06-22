@@ -95,7 +95,7 @@ function Builder() {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ signal_chain: signalChain })
+                body: JSON.stringify({ chain: signalChain })
             })
             let res = await req.json()
             console.log('post res:', res)

@@ -153,7 +153,7 @@ body {
   flex-wrap: nowrap;
   overflow: scroll;
   column-gap: 2px;
-  margin-top: 8%;
+  margin-top: 7%;
   padding-bottom: 3%;
   /* margin-left: 2%;
   margin-right: 2%; */
@@ -162,8 +162,8 @@ body {
 .pedals-item{
   display: flex;
   margin-top: 13vh;
-  height: 13rem;
-  width: 13rem;
+  height: 11rem;
+  width: 11rem;
 }
 .pedals-item:hover {
   opacity: 1;
@@ -175,7 +175,6 @@ body {
   /* position: absolute; */
   /* height: 50rem;
   width: 50rem; */
-  margin-top: 5%;
   height: 800px;
   width: 1500px;
 }
@@ -185,6 +184,7 @@ body {
   position: absolute;
   height: 800px;
   width: 1500px;
+  margin-right: 5%;
   z-index: -1;
 }
 
