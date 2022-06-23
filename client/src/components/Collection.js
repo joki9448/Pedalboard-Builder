@@ -35,6 +35,8 @@ function Collection() {
                     return <ConfigContainer 
                     key={e.id} 
                     config={e}
+                    isTextVisible={isTextVisible}
+                    setIsTextVisible={setIsTextVisible}
                     />
                 })}
             </div>
