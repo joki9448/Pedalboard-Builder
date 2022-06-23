@@ -49,8 +49,9 @@ body {
 .home-button {
   position: absolute;
   border: 2px solid #FF87F8;
+  text-shadow: 0 0 10px #FF87F8, 0 0 5px teal;
   color: white;
-  background-color: purple;
+  background-color: black;
   font-size: 25px;
   margin-top: 30px;
   margin-left: 93%;
@@ -462,6 +463,11 @@ body {
   margin-top: 10%;
   margin-left: 20%;
   gap: 10px;
+  opacity: 0.8;
+  transition: .5s;
+}
+.config-container:hover {
+  opacity: 1;
 }
 .config-item {
   height: 12rem;
@@ -471,12 +477,23 @@ body {
   font-family: 'Play', sans-serif;
   font-size: 25px;
   text-align: center;
+  opacity: 0.5;
+  transition: 1.5s;
+}
+.model-text {
+  opacity: 1;
 }
 .effect-text {
   font-family: 'Play', sans-serif;
   font-size: 15px;
   text-align: center;
+  opacity: 0.5;
+  transition: 1.5s;
 }
+.effect-text:hover {
+  opacity: 1;
+}
+
 /* .whitescreen {
   position: absolute;
   z-index: 1;

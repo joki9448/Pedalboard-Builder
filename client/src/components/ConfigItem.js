@@ -1,16 +1,7 @@
-// import ConfigItem from './ConfigItem';
-
-function ConfigContainer({ configs, isTextVisible }) {
-    // console.log('configs post map', configs.chain)
-    let savedConfigs = configs.chain
-    console.log('savedconfigs', savedConfigs)
-    // const { brand, model, effect } = configs
-
+function ConfigItem({ e }) {
+    console.log('config item', e)
     return (
         <div>
-            {savedConfigs.map((e) => {
-                console.log('savedconfigs', e)
-            })}
             {/* <img
                 className="config-item"
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
@@ -21,4 +12,4 @@ function ConfigContainer({ configs, isTextVisible }) {
     )
 }
 
-export default ConfigContainer;
+export default ConfigItem;

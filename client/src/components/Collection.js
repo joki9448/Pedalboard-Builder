@@ -4,17 +4,25 @@ import ConfigContainer from './ConfigContainer';
 
 function Collection() {
 
-    const [config, setConfig] = useState([])
+    const [configs, setConfigs] = useState([])
     const [isTextVisible, setIsTextVisible] = useState(false)
+
+    const handleMouseEnter = () => {
+        setIsTextVisible(true)
+    }
+    const handleMouseLeave = () => {
+        setIsTextVisible(false)
+    }
+
 
     const request = async () => {
         try {
             let req = await fetch('/configs')
             let res = await req.json()
-            console.log('res: ', res[1].chain)
-            let chain = res[1].chain
-            console.log('chain ', chain)
-            setConfig(chain)
+            console.log('res: ', res)
+            // let chain = res[1].chain
+            // console.log('chain ', chain)
+            setConfigs(res)
         }   catch (error) {
             alert(error.message)
         }
@@ -30,13 +38,13 @@ function Collection() {
             </Link>
             <h1 className="collection-header">Your Collection</h1>
             <div className="collection-head-layer"></div>
-            <div className="config-container">
-                {config.map((e) => {
+            <div className="config-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                {configs.map((e) => {
+                    console.log('configs map', e)
                     return <ConfigContainer 
                     key={e.id} 
-                    config={e}
+                    configs={e}
                     isTextVisible={isTextVisible}
-                    setIsTextVisible={setIsTextVisible}
                     />
                 })}
             </div>
