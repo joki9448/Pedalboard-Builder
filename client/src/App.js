@@ -15,9 +15,6 @@ import Collection from './components/Collection';
 
 function App() {
 
-  // const path = useLocation().builder;
-  // const location = path.split("/")[1];
-
   return (
     <div className="App">
       <Router>
