@@ -419,7 +419,7 @@ body {
 /* COLLECTION PAGE */
 
 .collect-home-btn {
-  position: absolute;
+  /* position: absolute;
   border: 2px solid #FFF300;
   color: white;
   background-color: orange;
@@ -428,7 +428,19 @@ body {
   margin-left: 90%;
   opacity: 0.8;
   transition-duration: 0.4s;
+  font-family: 'Play', sans-serif; */
+  position: absolute;
+  border: 2px solid orange;
+  text-shadow: 0 0 10px #FFF300, 0 0 5px teal;
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 90%;
+  opacity: 0.8;
+  transition-duration: 0.4s;
   font-family: 'Play', sans-serif;
+
 }
 .collect-home-btn:hover {
   background-color: black;
@@ -438,7 +450,7 @@ body {
 
 .collection-header {
   color: white;
-  text-shadow: 0 0 10px orange, 0 0 5px #FFF300;
+  text-shadow: 0 0 10px #FFF300, 0 0 5px #FFF300;
   background: linear-gradient(to right, black, grey, white);
   width: 25vw;
   padding: 10px;
@@ -472,6 +484,7 @@ body {
   max-height: 30%;
   width: 100%;
   padding-top: 2%;
+  z-index: -1;
   box-shadow: 3px 0px 10px 3px grey; 
 }
 .config-container:hover {
@@ -484,7 +497,6 @@ body {
 }
 .config-item {
   height: 10rem;
-  z-index: -1;
 }
 
 
@@ -493,6 +505,7 @@ body {
   flex-direction: column;
   text-align: left;
   height: 200px;
+  z-index: 2;
 } 
 .model-text {
   /* position: absolute; */
