@@ -39,7 +39,7 @@ body {
 .background-color {
   display: flex;
   position: absolute;
-  background-color: #B90000;
+  background-color: #990000;
   height: 5vh;
   width: 95%;
   z-index: -2;
@@ -471,6 +471,7 @@ body {
   max-height: 30%;
   width: 100%;
   padding-top: 2%;
+  padding-bottom: 2%;
   z-index: -1;
   opacity: 0.5;
   transition: 0.4s;
@@ -484,6 +485,7 @@ body {
 .config-items-container {
   display: flex;
   flex-direction: row;
+  gap: 5%;
 }
 /* .config-items-container:hover {
   opacity: 1;
