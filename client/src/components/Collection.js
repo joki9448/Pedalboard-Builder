@@ -24,7 +24,7 @@ function Collection() {
     return (
         <div>
             <Link to="/">
-                <button>HOME</button>
+                <button className="collect-home-btn">HOME</button>
             </Link>
             <h1 className="collection-header">Your Collection</h1>
             <div className="collection-head-layer"></div>

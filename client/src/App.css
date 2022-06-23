@@ -412,31 +412,47 @@ body {
   box-shadow: 0px 3px 0px 0px white; 
 }
 
+.collect-home-btn {
+  /* position: absolute; */
+  border: 2px solid #FFF300;
+  color: white;
+  background-color: orange;
+  font-size: 25px;
+  /* margin-top: 30px; */
+  margin-left: 93%;
+  opacity: 0.8;
+  transition-duration: 0.4s;
+  font-family: 'Play', sans-serif;
+}
+.collect-home-btn:hover {
+  background-color: black;
+  color: #FFF300;
+  cursor: pointer;
+}
+
 .collection-header {
   color: white;
-  text-shadow: 0 0 10px #FF87F8, 0 0 5px teal;
+  text-shadow: 0 0 10px orange, 0 0 5px #FFF300;
   background: linear-gradient(to right, black, grey, white);
   width: 19vw;
   padding: 10px;
   margin-left: 2%;
-  position: absolute;
+  /* position: absolute; */
   font-family: 'Play', sans-serif;
 }
 .collection-head-layer {
-  position: absolute;
-  color: #FF87F8;
-  background: linear-gradient(to right, #FF87F8, white);
+  /* position: absolute; */
+  background: linear-gradient(to right, orange, white);
   width: 18vw;
   padding: 10px;
   margin-left: 1.5%;
-  margin-top: 2%;
+  margin-top: 2.25%;
   height: 35px;
   z-index: -1;
   opacity: 0.8;
 }
 
 .config-container {
-  /* background: linear-gradient(180deg, white, grey, white); */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
