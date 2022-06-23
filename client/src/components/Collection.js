@@ -26,8 +26,9 @@ function Collection() {
             <Link to="/">
                 <button>HOME</button>
             </Link>
-            <h1>Your Boards</h1>
-            <div>
+            <h1 className="collection-header">Your Collection</h1>
+            <div className="collection-head-layer"></div>
+            <div className="config-container">
                 {config.map((e) => {
                     return <ConfigContainer key={e.id} config={e}/>
                 })}

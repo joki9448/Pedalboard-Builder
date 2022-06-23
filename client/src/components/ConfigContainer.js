@@ -4,6 +4,7 @@ function ConfigContainer({ config }) {
     return (
         <div>
             <img
+                className="config-item"
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
         </div>

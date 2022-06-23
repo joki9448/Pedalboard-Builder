@@ -412,6 +412,43 @@ body {
   box-shadow: 0px 3px 0px 0px white; 
 }
 
+.collection-header {
+  color: white;
+  text-shadow: 0 0 10px #FF87F8, 0 0 5px teal;
+  background: linear-gradient(to right, black, grey, white);
+  width: 19vw;
+  padding: 10px;
+  margin-left: 2%;
+  position: absolute;
+  font-family: 'Play', sans-serif;
+}
+.collection-head-layer {
+  position: absolute;
+  color: #FF87F8;
+  background: linear-gradient(to right, #FF87F8, white);
+  width: 18vw;
+  padding: 10px;
+  margin-left: 1.5%;
+  margin-top: 2%;
+  height: 35px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.config-container {
+  /* background: linear-gradient(180deg, white, grey, white); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 3px solid black;
+  width: 55%;
+  margin-top: 10%;
+  margin-left: 23%;
+}
+.config-item {
+  height: 12rem;
+}
+
 /* .path-container {
   height: 100vh;
 } */
