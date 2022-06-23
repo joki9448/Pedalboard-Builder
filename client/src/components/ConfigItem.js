@@ -1,15 +1,19 @@
-function ConfigItem({ configs, isTextVisible }) {
+function ConfigItem({ configs, isTextVisible, setIsTextVisible }) {
     console.log('config item', configs)
-    const { brand, model, effect } = configs
+    const { id, brand, model, effect } = configs
+
     return (
         <div>
             <img
+                onClick={(e) => {console.log(e.target)}}
                 className="config-item"
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
             <div className="text-container">
-                <div className="model-text">{isTextVisible ? model : null}</div>
-                <div className="effect-text">{isTextVisible ? brand : null}</div>
+                { model } 
+            </div>
+            <div className="text-container">
+                { effect } 
             </div>
         </div>
     )

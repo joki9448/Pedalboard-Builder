@@ -38,13 +38,14 @@ function Collection() {
             </Link>
             <h1 className="collection-header">Your Collection</h1>
             <div className="collection-head-layer"></div>
-            <div className="config-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className="config-container">
                 {configs.map((e) => {
                     console.log('configs map', e)
                     return <ConfigContainer 
                     key={e.id} 
                     configs={e}
                     isTextVisible={isTextVisible}
+                    setIsTextVisible={setIsTextVisible}
                     />
                 })}
             </div>
