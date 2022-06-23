@@ -1,4 +1,4 @@
-function ConfigContainer({ config }) {
+function ConfigContainer({ config, isTextVisible, setIsTextVisible }) {
     console.log('config', config)
     const { brand, model, effect } = config
     return (
@@ -7,6 +7,8 @@ function ConfigContainer({ config }) {
                 className="config-item"
                 src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
             />
+            <div className="model-text">{model}</div>
+            <div className="effect-text">{effect}</div>
         </div>
     )
 }

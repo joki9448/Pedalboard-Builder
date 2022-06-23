@@ -5,6 +5,7 @@ import ConfigContainer from './ConfigContainer';
 function Collection() {
 
     const [config, setConfig] = useState([])
+    const [isTextVisible, setIsTextVisible] = useState(false)
 
     const request = async () => {
         try {
@@ -12,6 +13,7 @@ function Collection() {
             let res = await req.json()
             console.log('res: ', res[1].chain)
             let chain = res[1].chain
+            console.log('chain ', chain)
             setConfig(chain)
         }   catch (error) {
             alert(error.message)
@@ -30,7 +32,10 @@ function Collection() {
             <div className="collection-head-layer"></div>
             <div className="config-container">
                 {config.map((e) => {
-                    return <ConfigContainer key={e.id} config={e}/>
+                    return <ConfigContainer 
+                    key={e.id} 
+                    config={e}
+                    />
                 })}
             </div>
         </div>
