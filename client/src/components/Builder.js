@@ -137,6 +137,7 @@ function Builder() {
             <button className="submit-button" onClick={(e) => {
                 e.preventDefault()
                 handleBoardSubmit()
+                alert('Board Saved!')
             }}>
                 Save Board
             </button>

@@ -1,4 +1,4 @@
-// import ConfigItem from './ConfigItem';
+import ConfigItem from './ConfigItem';
 
 function ConfigContainer({ configs, isTextVisible }) {
     // console.log('configs post map', configs.chain)
@@ -7,16 +7,11 @@ function ConfigContainer({ configs, isTextVisible }) {
     // const { brand, model, effect } = configs
 
     return (
-        <div>
+        <div  className="config-items-container">
             {savedConfigs.map((e) => {
                 console.log('savedconfigs', e)
+                return <ConfigItem key={e.id} configs={e} isTextVisible={isTextVisible}/>
             })}
-            {/* <img
-                className="config-item"
-                src={`/images/${brand.replace(' ', '-').toLowerCase()}/${effect.replace(' / ', '-').toLowerCase()}/${model.replace(' ', '-').toLowerCase()}.jpeg`}
-            />
-            <div className="model-text">{isTextVisible ? model : null}</div>
-            <div className="effect-text">{isTextVisible ? effect : null}</div> */}
         </div>
     )
 }

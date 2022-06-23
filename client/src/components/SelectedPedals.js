@@ -12,7 +12,6 @@ function SelectedPedals({ p, handleRemovePedal }){
 
     return (
         <div>
-            <button onClick={handleRemovePedal}>X</button>
             <img
                 className="selectedpedal"
                 onDragStart={handleDrag} 
