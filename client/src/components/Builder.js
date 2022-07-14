@@ -10,12 +10,13 @@ import { AiFillPlayCircle } from 'react-icons/ai'
 function Builder() {
 
     const [pedals, setPedals] = useState({all: [], filtered: [], dropped: []})
-    const [config, setConfig] = useState([])
+
+    let signalChain = pedals.dropped
+
     // console.log('state of filteredPedals after setting filters: ', filteredPedals)
     // console.log('dropped', pedals.dropped)
     // const { brand, model, effect } = pedals.dropped
-    let signalChain = pedals.dropped
-    console.log('signalChain: ', signalChain)
+    // console.log('signalChain: ', signalChain)
 
     const request = async () => {
         try {
@@ -36,10 +37,16 @@ function Builder() {
     // For filtering pedals in menu
     const handleModelClick = () => {
         let f = pedals.all.filter((ped) => ped.brand === selectedBrand && ped.effect === selectedEffect)
+
+        if (isBrandSelected === false) {
+            alert('Please select a brand!')
+        } else if (isEffectSelected === false) {
+            alert('Please select an effect type!')
+        } else 
         setPedals(prevState => {
             return {...prevState, filtered: f}
-        })
-        console.log('filtered', pedals.filtered)
+        });
+        // console.log('filtered', pedals.filtered)
     }
 
     // Toggle pedalboard view
@@ -52,13 +59,15 @@ function Builder() {
     const [isFrameSelected, setIsFrameSelected] = useState(false)
     const [selectedFrame, setSelectedFrame] = useState('')
 
-    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Wampler', 'Seymour Duncan', 'Darkglass']
+    const brandsList = ['TC Electronic', 'Dunlop', 'MXR', 'Boss', 'Walrus Audio', 'Strymon', 'Wampler', 'Seymour Duncan']
     const [isBrandsListVisible, setIsBrandsListVisible] = useState(false)
     const [selectedBrand, setSelectedBrand] = useState('')
+    const [isBrandSelected, setIsBrandSelected] = useState(false)
 
     const effectsList = ['Distortion / Gain', 'Compression / EQ', 'Reverb / Delay', 'Modulation', 'Expression']
     const [isFXListVisible, setIsFXListVisible] = useState(false)
     const [selectedEffect, setSelectedEffect] = useState('')
+    const [isEffectSelected, setIsEffectSelected] = useState(false)
 
     // React DnD
     const [{isOver}, drop] = useDrop(() => ({
@@ -97,6 +106,7 @@ function Builder() {
                 },
                 body: JSON.stringify({ chain: signalChain })
             })
+            // if request successful, alert (res.ok)
             // let res = await req.json()
             // console.log('post res:', res)
         }   catch (error) {
@@ -108,7 +118,7 @@ function Builder() {
         e.preventDefault()
         let model = e.dataTransfer.getData("model")
         let id = e.dataTransfer.getData("id")
-        console.log('Dragged item V', model, id)
+        // console.log('Dragged item V', model, id)
         let foundPedal = pedals.all.find((ped) => ped.id == id)
         
         setPedals((prevState) => {
@@ -120,6 +130,8 @@ function Builder() {
                 // console.log('foundPedal obj in stopduplicates', foundPedal.id)
             })
             // console.log('dropped ids', droppedIds)
+            // Try else if's to stop drop if max pedal limit is reached
+            // May have to account for each pedalboard frame size
             if (!droppedIds.includes(foundPedal.id))
                 return {...prevState, ['dropped']: [...prevState.dropped, foundPedal]}
             else
@@ -137,6 +149,7 @@ function Builder() {
             <button className="submit-button" onClick={(e) => {
                 e.preventDefault()
                 handleBoardSubmit()
+                // This alert should not be needed after res.ok alert is implemented
                 alert('Board Saved!')
             }}>
                 Save Board
@@ -147,7 +160,7 @@ function Builder() {
 
             <button className="browse-button"onClick={() => {handleModelClick()}}>
                 <div>
-                <AiFillPlayCircle />
+                  <AiFillPlayCircle />
                 </div>
             </button>
             <button className="pb-button" onClick={handleBoardVisibleClick}>
@@ -171,11 +184,13 @@ function Builder() {
                     isBrandsListVisible={isBrandsListVisible}
                     setIsBrandsListVisible={setIsBrandsListVisible}
                     setSelectedBrand={setSelectedBrand}
+                    setIsBrandSelected={setIsBrandSelected}
 
                     effectsList={effectsList}
                     isFXListVisible={isFXListVisible}  
                     setIsFXListVisible={setIsFXListVisible}
                     setSelectedEffect={setSelectedEffect}
+                    setIsEffectSelected={setIsEffectSelected}
 
                     isPedalContainerVisible={isPedalContainerVisible}
                     setIsPedalContainerVisible={setIsPedalContainerVisible}

@@ -8,14 +8,19 @@ function Menu({
                 framesList,
                 setSelectedFrame,
                 setIsFrameSelected,
+
                 brandsList,
                 isBrandsListVisible,
                 setIsBrandsListVisible,
                 setSelectedBrand,
+                setIsBrandSelected,
+
                 effectsList,
                 isFXListVisible,
                 setIsFXListVisible,
                 setSelectedEffect,
+                setIsEffectSelected,
+
                 handleModelClick,
                 handleBoardVisibleClick,
                 isBoardContainerVisible,
@@ -38,6 +43,7 @@ function Menu({
                 {isBrandsListVisible ? <BrandsList 
                     brandsList={brandsList}
                     setSelectedBrand={setSelectedBrand}
+                    setIsBrandSelected={setIsBrandSelected}
                 /> 
                 : null}
             </div>
@@ -46,6 +52,7 @@ function Menu({
                 {isFXListVisible ? <FxList 
                     effectsList={effectsList}
                     setSelectedEffect={setSelectedEffect}
+                    setIsEffectSelected={setIsEffectSelected}
                 /> 
                 : null}
             </div>
