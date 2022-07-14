@@ -206,7 +206,6 @@ body {
   height: 800px;
   width: 1500px;
 }
-
 .pb-img {
   /* background: black; */
   position: absolute;
@@ -214,6 +213,13 @@ body {
   width: 1500px;
   margin-right: 5%;
   z-index: -1;
+}
+.no-frame {
+  display: flex;
+  background-color: white;
+  margin-top: 8%;
+  height: 800px;
+  width: 1500px;
 }
 
 .selectedpedals-container {

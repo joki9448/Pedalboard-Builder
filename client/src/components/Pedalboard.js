@@ -1,11 +1,15 @@
 import SelectedPedals from './SelectedPedals';
 
-function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals, handleRemovePedal}) {
+function Pedalboard({ selectedFrame, isFrameSelected, setIsBoardContainerVisible, onDrop, pedals, handleRemovePedal}) {
     // console.log('from pedalboard: ', board)
-
-    // create a component that pops up as an alert
-    if(isFrameSelected === false) {
+    const frameNotSelected = () => {
         alert('Please select a board frame!')
+    }
+
+    if(isFrameSelected === false) {
+        frameNotSelected();
+        setIsBoardContainerVisible(false);
+        return <div className="no-frame"></div>
     }
     return (
         <div className="pb-window" onDrop={onDrop}>

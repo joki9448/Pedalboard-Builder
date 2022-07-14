@@ -211,10 +211,15 @@ function Builder() {
             : null}
 
             {isBoardContainerVisible ? <Pedalboard 
+                pedals={pedals}
+
                 selectedFrame={selectedFrame} 
                 isFrameSelected={isFrameSelected}
+
+                setIsBoardContainerVisible={setIsBoardContainerVisible}
+
                 onDrop={handleDragOver}
-                pedals={pedals}
+
                 handleRemovePedal={handleRemovePedal}
                 /> 
             : null}
