@@ -5,7 +5,7 @@ function Pedalboard({ selectedFrame, isFrameSelected, onDrop, pedals, handleRemo
 
     // create a component that pops up as an alert
     if(isFrameSelected === false) {
-        return "Please select a pedalboard!"
+        alert('Please select a board frame!')
     }
     return (
         <div className="pb-window" onDrop={onDrop}>
