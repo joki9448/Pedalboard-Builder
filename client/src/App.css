@@ -60,7 +60,6 @@ body {
   font-family: 'Play', sans-serif;
 }
 .home-button:hover {
-  background-color: white;
   color: #FF87F8;
   cursor: pointer;
 }
