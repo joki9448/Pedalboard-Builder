@@ -38,11 +38,13 @@ function Builder() {
     const handleModelClick = () => {
         let f = pedals.all.filter((ped) => ped.brand === selectedBrand && ped.effect === selectedEffect)
 
-        if (isBrandSelected === false) {
+        if (isBrandSelected === false && isEffectSelected === true) {
             alert('Please select a brand!')
-        } else if (isEffectSelected === false) {
+        } else if (isEffectSelected === false && isBrandSelected === true) {
             alert('Please select an effect type!')
-        } else 
+        } else if (isBrandSelected === false && isEffectSelected === false) {
+            alert('Please select brand and effect!')
+        }
         setPedals(prevState => {
             return {...prevState, filtered: f}
         });
