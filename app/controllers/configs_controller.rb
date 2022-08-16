@@ -4,6 +4,7 @@ class ConfigsController < ApplicationController
         render json: Config.all, status: 200
     end
 
+    # not creating a new record in postgres, just adding to first record
     def create 
         config = Config.create!(chain: params[:chain])    
         config.chain['links'] << params[:brand, :model, :effect]
