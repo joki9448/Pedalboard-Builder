@@ -96,7 +96,7 @@ Pedal.create(brand: "MXR", model: "Sugar Drive", effect: "Distortion / Gain", co
 Pedal.create(brand: "MXR", model: "Super Badass", effect: "Distortion / Gain", config_id: c1.id)
 Pedal.create(brand: "MXR", model: "Timmy", effect: "Distortion / Gain", config_id: c1.id)
 
-# BOSS #
+# BOSS (need better pictures) # 
 
 Pedal.create(brand: "Boss", model: "Compressor CP-1X", effect: "Compression / EQ", config_id: c1.id)
 Pedal.create(brand: "Boss", model: "Equalizer GE-7", effect: "Compression / EQ", config_id: c1.id)
